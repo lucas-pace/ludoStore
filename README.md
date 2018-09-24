@@ -10,6 +10,6 @@
 
 ### Desenvolvedores
 - Yan
-- Cristiano
+- Felippe
 - Ana Mendes
 - Carol Vieira
