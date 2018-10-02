@@ -33,7 +33,7 @@ RP DA LIGA DIA 20/10
 
 - Crie sua branch usando como o padrão seu primeiro nome começando com letra minúscula: git checkout -b primeironome
 ### Rotina
--Adicione as alterações feitas: git add *
+- Adicione as alterações feitas: git add *
 
 - Cheque em qual branch está e quais alterações foram adicionadas: git status
 
