@@ -41,8 +41,9 @@ RP DA LIGA DIA 20/10
 
 - Envie o commit feito para sua branch: git push origin suabranch
 
-- Volte para a master: git checkout master
 ### Quando estiver tudo prontinho
+- Volte para a master: git checkout master
+
 - Mescle a master com as alterações enviadas para sua branch (apenas quando solicitado pelo SM): git merge suabranch
 
 - Confirme o merge (apenas quando solicitado pelo SM): git push origin master
