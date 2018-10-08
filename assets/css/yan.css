@@ -1,0 +1,66 @@
+
+  .page-footer {
+    
+    align-self: bottom;
+    float: bottom;
+    background-color: #920000;  
+
+  }
+  .infoLojaWraperFooter{
+    text-align: center;
+    
+    margin-top:  1.5pc;
+ 
+ 
+  }
+  .infoLojaFooter{
+    display: inline-block;
+    font-size: 1.1pc;
+    color:#FFFFFF;
+    
+  }
+  .iconeMidiaSocialFooter{
+     margin-top: 0.2pc;
+      font-size: 2.7pc;
+      vertical-align: center;
+      color :#920000;
+
+  }
+  .iconeMidiaSocialFooterWraperIndividual{
+    display: inline-block;
+    width: 3pc;
+    height: 3pc;
+    margin-left: 0.5pc;/
+    margin-right: 0.5pc;
+    background-color: white;
+    border-radius:50pc;
+  }
+
+  .iconeMidiaSocialFooterWarper{
+    text-align: center;
+    margin-top: 0.3pc;
+    margin-bottom: 0.5pc;
+  
+  }
+  .page{
+  
+  }
+
+ li{
+  line-height: 0.7pc;
+ }
+  #map {
+       
+        margin-top: 0.5pc;
+        height: 9pc;  
+        width:  9pc; 
+        display: inline-block;
+        border-radius: 50pc;
+       }
+
+  .map-wraper{
+    height: 9.5pc;  
+
+ 
+    text-align: center;
+  }
