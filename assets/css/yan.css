@@ -21,7 +21,7 @@
   }
   .iconeMidiaSocialFooter{
      margin-top: 0.2pc;
-      font-size: 2.7pc;
+      font-size: 2.7pc !important;
       vertical-align: center;
       color :#920000;
 
