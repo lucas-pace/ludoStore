@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!-- Importando CSS do Bootstrap -->
+  	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    <title>Contato</title> 
+  </head>
+
+<body>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-5">
+        <div class="img-contato">
+          <img src="img/contato-pic.png" class="img-fluid"  alt="imagem de um mago e sua coruja">
+        </div>
+      </div>
+
+      <div class="col-7">
+        <div class="titulo-contato">
+             <h1><b>Fale Conosco</b></h1>
+        </div>
+          
+          <form>
+
+              <div class="form-group nome-contato">
+                    <label for="nome-contato"></label>
+                    <input type="text" class="form-control" id="nome-contato" placeholder="nome">
+
+              </div>
+
+              <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" class="form-control" id="email" placeholder="email">    
+              </div>
+
+              <div class="form-group">
+                <label for="selecao-assunto"></label>
+                <select class="form-control" id="selecao-assunto">
+                  <option disabled selected>Assunto</option>
+                  <option>Sugestões</option>
+                  <option>Dúvidas</option>
+                  <option>Elogios</option>
+                  <option>Criticas</option>
+                  <option>Outros</option>
+                </select> 
+              </div>
+
+              <div class="form-group mensagem-contato">
+                <label for="mensagem-contato"></label>
+                <textarea class="form-control" id="mensagem-contato" rows="3" placeholder="Mensagem"></textarea>
+              </div>
+
+              <div class="contato-botao">
+                <button class="btn" type="submit" value="enviar">enviar</button>
+              </div>
+ 
+        </form>
+      </div>
+    </div> 
+  </div>  
+</body>
+<!-- Importando Javascript do Bootstrap -->
+<script  src="assets/js/popper.min.js"></script>
+<script  src="assets/js/jQuery-3.2.1.slim.min.js"></script>
+<script  src="assets/js/bootstrap.min.js"></script>
+</html>
