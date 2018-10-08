@@ -1,0 +1,44 @@
+body{
+	background-color:#ffffffea;
+}
+
+#principal{
+	width: 725px;
+	margin: auto;
+	background-color:white;
+}
+
+#cabecalho{
+	background-image: url("imagem/dado.jpg");
+	background-repeat: no-repeat;
+	height: 100px;	
+	width: 200px;
+	margin-top: 10px;
+}
+
+#menu ul{
+	list-style-type: none;
+	margin-top: 75px;
+	margin-left: 150px;
+}
+
+#menu ul li{
+	float: left;
+	font-size: 20px;
+	text-transform: uppercase;
+	
+   font-weight: bold;
+}
+
+#menu ul li a{
+	padding-right: 10px;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-decoration: none;
+	color: #114455;
+}
+
+#menu ul li a:hover{
+	background-color: #50BCE0;
+}
