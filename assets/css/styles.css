@@ -7,7 +7,7 @@
 }
 
 .breve-descricao p{
-	font-family: 'Belleza', sans-serif;
+	font-family: "Belleza-Regular";
 	text-align: left;
 	font-size: 20px;
 }
@@ -31,14 +31,17 @@
 	margin-bottom: 15px;
 	background-size: contain;
 	background-repeat: no-repeat;
-}
+}	
 
 .miniatura a{
 	text-decoration: none;
-
 }
 
-.blackbox{  /*efeito da cor*/
+.test{
+	text-align: center;
+}
+
+.blackbox{ 
 	width: 100%;
 	height: 100%;
 	background-color: #8B0000;
@@ -61,7 +64,7 @@
 	color: #DCDCDC;
 	text-transform: uppercase;
 	text-align: center;
-	font-family: 'MedievalSharp', cursive;
+	font-family: "MedievalSharp";
 	margin-top: -70px;
 	
 }
@@ -72,32 +75,22 @@
 	color: #DCDCDC;
 	text-transform: none;
 	margin-top: 0;
-	font-family: 'Belleza', sans-serif;
+	font-family: "Belleza-Regular";
 	margin-left: 10px;
 	margin-right: 5px;
 	text-align: left;
 }
 
 .produtos-destaques {
+	font-family: "dragonslapper";
 	text-align: left;
-}
-
-.produtos-destaques img{
-	width: 500px;
+	color: #8B0000;
 	margin-top: 9px;
 	margin-bottom: 35px;
+	margin-left: 10px;
 }
-
 
 .form-group{
-	margin-top: -17px;
-}
-
-.nome-contato{
-	margin-top: 10px;
-}
-
-.mensagem-contato{
 	margin-top: 10px;
 }
 
@@ -112,10 +105,25 @@
 
 .titulo-contato h1{
 	text-align: center;
-	margin-top: 140px;
-	font-family: 'MedievalSharp', cursive;
+	margin-top: 70px;
+	font-family: "MedievalSharp";
 	font-size: 45px;
-}	
+}
+
+@font-face{
+  font-family: "dragonslapper";
+  src: url('../fontes/dragonslapper.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: "Belleza-Regular";
+  src: url('../fontes/Belleza-Regular.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: "MedievalSharp";
+  src: url('../fontes/MedievalSharp.ttf') format('truetype');
+}
 
 @media(max-width: 1000px) {
 
