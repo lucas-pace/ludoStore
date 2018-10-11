@@ -94,13 +94,19 @@
 	margin-top: 10px;
 }
 
-.contato-botao{
+.contato-botao-enviar{
 	text-align: right;
 }
 
+.contato-botao{
+	margin-top: 10px;
+	background-color: #8B0000;
+	border-color: #8B0000;
+	color: #ffffff;
+}
+
 .img-contato{
-	margin-top: 40px;
-	
+	margin-top: 40px;	
 }
 
 .titulo-contato h1{
@@ -110,9 +116,66 @@
 	font-size: 45px;
 }
 
+.descricao-produto{
+	border-width: 2px;
+	border-color:#DCDCDC; 
+	border-style:ridge;
+	border-top-style: solid;
+	border-top-color: #8B0000;
+	border-top-width: 8px;
+	margin-top: 30px;
+	border-radius: 6px;
+	margin-bottom: 30px;
+	margin-right: 10px;
+	margin-left:10px;
+	height: 100%;
+	width: 100%;
+}
+
+.descricao-produto h1{
+	margin-top: 20px;
+	margin-bottom: 17px;
+	font-size: 35px;
+	text-align: left;
+	font-family: "Rubik-Regular";
+}
+
+.descricao-produto h2{
+	font-size: 18px;
+	text-align: left;
+	font-family: "Rubik-Regular";
+	margin-top: 20px;
+	margin-bottom: 13px;
+}
+
+.descricao-produto h3{
+	font-size: 17px;
+	font-family: "Rubik-Regular";
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.descricao-produto img{
+	margin-top: 8px;
+	margin-bottom: 20px;
+	width: 370px;
+}
+
+.botao-produto-individual{
+	background-color: #8B0000;
+	border-color: #8B0000;
+	color: #ffffff;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
 @font-face{
   font-family: "dragonslapper";
   src: url('../fontes/dragonslapper.ttf') format('truetype');
+}
+@font-face{
+  font-family: "Rubik-Regular";
+  src: url('../fontes/Rubik-Regular.ttf') format('truetype');
 }
 
 @font-face{
@@ -139,4 +202,5 @@
 .blackbox:hover{
 	opacity: 0;
 }
+
 }
