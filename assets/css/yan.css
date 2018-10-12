@@ -19,6 +19,7 @@
     color:#FFFFFF;
     
   }
+  
   .iconeMidiaSocialFooter{
      margin-top: 0.2pc;
       font-size: 2.7pc !important;
@@ -54,10 +55,92 @@
     margin-bottom: 0.5pc;
   
   }
-  .page{
-  
+  .productTableContainer{
+    width: 100%;
+    height: 70%;
+     text-align: center;
+     margin-left: 26pc;
+
   }
 
+  .hiperlinkProductTable:hover{
+    color: #920000;
+    text-decoration: none;
+  }
+  .hiperlinkProductTable{
+    color: black;
+    
+  }
+  .iconeDeleteProductTableWraper{
+    display: inline-block;
+    background-color: #920000;
+    border-radius:50pc;
+    height:24px;
+    width:24px;
+  }
+    
+  .iconeDeleteProductTable{
+ 
+    margin-top: 2px;
+    font-size: 19px !important;
+    vertical-align: center;
+    color: #FFFFFF;
+
+ }
+ .iconeDeleteProductTableWraper:hover{
+  
+  background-color: #FFFFFF;
+  
+}
+  
+.iconeAddProductTable:hover{
+  text-decoration: none;
+  color: #920000;
+
+}
+.iconeAddProductTableWraper{
+  display: inline-block;
+  background-color: #920000;
+  border-radius:50pc;
+  height:40px;
+  width:40px;
+  margin-top: 5.3pc;
+margin-left: -10pc;
+}
+  
+.iconeAddProductTable{
+
+  margin-top: 2px;
+  font-size: 40px !important;
+  vertical-align: center;
+  color: #FFFFFF;
+
+}
+.iconeAddProductTableWraper:hover{
+
+background-color: #FFFFFF;
+
+}
+
+.iconeDeleteProductTable:hover{
+text-decoration: none;
+color: #920000;
+
+}
+  table.table-bordered{
+      border:1px solid #920000;
+      margin-top:20px;
+    }
+  table.table-bordered > thead > tr > th{
+      border:1px solid #920000;
+  }
+  thead.thead{
+    background-color: #920000;
+    color: #FFFFFF;
+  }
+  table.table-bordered > tbody > tr > td{
+      border:1px solid #920000;
+  }
  li{
   line-height: 0.7pc;
  }
@@ -71,7 +154,19 @@
         border-radius: 50pc;
         display: inline-block;
         float: center;
+       }  
+       #mapLocalizacao {
+       
+        
+        height: 9pc;  
+        width:  9pc; 
+        margin-top:0.3pc;
+        margin-left:0.3pc;
+        border-radius: 50pc;
+        display: inline-block;
+        float: center;
        }
+
 
   .map-wraper{
     margin-top: 0.5pc;
@@ -81,6 +176,15 @@
      border-radius: 50pc;
     margin-bottom: 0.5pc;
   
+  }
+  .mapwraperlocalizacao
+  {
+    margin-top: 0.5pc;
+    height: 9.6pc;
+    width: 9.6pc;  
+     background-color:#610000;
+     border-radius: 50pc;
+    margin-bottom: 0.5pc;
   }
   .footer-copyright{
 padding-top: 0.2pc;
