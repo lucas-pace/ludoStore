@@ -42,3 +42,32 @@ body{
 #menu ul li a:hover{
 	background-color: #50BCE0;
 }
+/*LOGIN*/
+.mass button {
+	text-decoration:none!important;
+	color:rgba(255,255,255,.5);
+ }
+ .mass button:hover,.mass button :active{
+	 color:white;
+	 text-decoration:none !important;
+ }
+ .modal-header{
+	 color:rgba(255,255,255,.5);
+	 background-color: #dc3545;
+ }
+ .modal-body{
+	 margin-top: 10px;
+	 margin-bottom: 10px;
+	 margin-left: 60px;
+ }
+ .modal-footer {
+	 background-color:#dc3545 
+ }
+ .modal-footer button {
+	 text-decoration:none!important;
+	 color:rgba(255,255,255,.5);
+  }
+  .modal-footer button:hover,.modal-footer button :active{
+	  color:white;
+	  text-decoration:none !important;
+  }
