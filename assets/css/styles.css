@@ -1,3 +1,114 @@
+/*PAGINA DE CONTATO*/
+
+.form-group{
+	margin-top: 10px;
+}
+
+.contato-botao-enviar{
+	text-align: right;
+}
+
+.contato-botao{
+	margin-top: 10px;
+	background-color: #8B0000;
+	border-color: #8B0000;
+	color: #ffffff;
+}
+
+.img-contato{
+	margin-top: 40px;	
+}
+
+.titulo-contato h1{
+	text-align: center;
+	margin-top: 70px;
+	font-family: "MedievalSharp";
+	font-size: 45px;
+}
+
+/* PAGINA DO PRODUTO INDIVIDUAL*/
+
+.descricao-produto{
+	border-width: 2px;
+	border-color:#DCDCDC; 
+	border-style:ridge;
+	border-top-style: solid;
+	border-top-color: #8B0000;
+	border-top-width: 8px;
+	margin-top: 30px;
+	border-radius: 6px;
+	margin-bottom: 30px;
+	margin-right: 10px;
+	margin-left:10px;
+	height: 100%;
+	width: 100%;
+}
+
+.descricao-produto h1{
+	margin-top: 20px;
+	margin-bottom: 17px;
+	font-size: 35px;
+	text-align: left;
+	font-family: "Rubik-Regular";
+}
+
+.descricao-produto h2{
+	font-size: 18px;
+	text-align: left;
+	font-family: "Rubik-Regular";
+	margin-top: 20px;
+	margin-bottom: 13px;
+}
+
+.descricao-produto h3{
+	font-size: 17px;
+	font-family: "Rubik-Regular";
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.descricao-produto img{
+	margin-top: 8px;
+	margin-bottom: 20px;
+	width: 370px;
+}
+
+/* PAGINA PRODUTO INDIVIDUAL ADM*/
+.textarea-nome{
+	width: 80% !important;
+}
+
+.title-produto-individual-adm{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 35px;
+	text-align: left;
+}
+
+.imagem-produto-individual-adm {
+    position: relative;
+    margin-top: 70px;
+}
+
+.botao-produto-individual-adm button{
+	margin-left: 10px;
+	margin-bottom: 20px;
+	background-color: #8B0000;
+	border-color: #8B0000;
+	color: #ffffff;
+}
+
+.botao-produto-individual-adm{
+	margin-top: 30px;
+	text-align: center;
+}
+
+.botao-produto-individual-adm-editar{
+	margin-top: 20px;
+}
+
+/* HOME*/
+
 .carousel-inner img {
     max-height: 450px;
 } 
@@ -7,7 +118,7 @@
 }
 
 .breve-descricao p{
-	font-family: 'Belleza', sans-serif;
+	font-family: "Belleza-Regular";
 	text-align: left;
 	font-size: 20px;
 }
@@ -31,14 +142,17 @@
 	margin-bottom: 15px;
 	background-size: contain;
 	background-repeat: no-repeat;
-}
+}	
 
 .miniatura a{
 	text-decoration: none;
-
 }
 
-.blackbox{  /*efeito da cor*/
+.test{
+	text-align: center;
+}
+
+.blackbox{ 
 	width: 100%;
 	height: 100%;
 	background-color: #8B0000;
@@ -61,7 +175,7 @@
 	color: #DCDCDC;
 	text-transform: uppercase;
 	text-align: center;
-	font-family: 'MedievalSharp', cursive;
+	font-family: "MedievalSharp";
 	margin-top: -70px;
 	
 }
@@ -72,53 +186,33 @@
 	color: #DCDCDC;
 	text-transform: none;
 	margin-top: 0;
-	font-family: 'Belleza', sans-serif;
+	font-family: "Belleza-Regular";
 	margin-left: 10px;
 	margin-right: 5px;
 	text-align: left;
 }
 
 .produtos-destaques {
+	font-family: "dragonslapper";
 	text-align: left;
-}
-
-.produtos-destaques img{
-	width: 500px;
+	color: #8B0000;
 	margin-top: 9px;
 	margin-bottom: 35px;
+	margin-left: 10px;
 }
 
-
-.form-group{
-	margin-top: -17px;
+.botao-produto-individual{
+	background-color: #8B0000;
+	border-color: #8B0000;
+	color: #ffffff;
+	margin-bottom: 20px;
+	margin-left: 20px;
 }
 
-.nome-contato{
-	margin-top: 10px;
-}
-
-.mensagem-contato{
-	margin-top: 10px;
-}
-
-.contato-botao{
-	text-align: right;
-}
-
-.img-contato{
-	margin-top: 40px;
-	
-}
-
-.titulo-contato h1{
-	text-align: center;
-	margin-top: 140px;
-	font-family: 'MedievalSharp', cursive;
-	font-size: 45px;
-}	
+/* MODIFICAÇÕES PARA MOBILE*/
 
 @media(max-width: 1000px) {
-
+/* HOME*/
 .miniatura img{
 	max-width: 100%;
 	background-size: 100%;
@@ -128,7 +222,40 @@
 .blackbox {
 	opacity: 0;
 }
+
 .blackbox:hover{
 	opacity: 0;
 }
+
+/*PAGINA PRODUTO INDIVIDUAL ADM*/
+.imagem-produto-individual-adm {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
 }
+
+}
+
+/* FONTES*/
+
+@font-face{
+  font-family: "dragonslapper";
+  src: url('../fontes/dragonslapper.ttf') format('truetype');
+}
+@font-face{
+  font-family: "Rubik-Regular";
+  src: url('../fontes/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: "Belleza-Regular";
+  src: url('../fontes/Belleza-Regular.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: "MedievalSharp";
+  src: url('../fontes/MedievalSharp.ttf') format('truetype');
+}
+
+

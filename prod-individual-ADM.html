@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Importando CSS do Bootstrap -->
+  <!-- Importando CSS do Bootstrap -->
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href = "assets/css/desgin.css">
+  <link rel="stylesheet" href = "assets/css/yan.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/js/scripts.js">
+  <title>Produto - ADM</title> 
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-5 imagem-produto-individual-adm">
+        <img src="fotos/imagem-aleatoria.png" class="img-fluid" alt="imagem do jogo">
+      </div> 
+
+      <div class="col-sm-7">
+        <h1 class="title-produto-individual-adm">Dados do Produto</h1>
+
+        <form>
+
+           <div class="form-group">
+            <label for="nome-produto-adm">Nome:</label>
+            <input type="text" class="form-control inputtext" id="nome-produto-adm" value="nome do produto">
+            
+          </div>
+
+          <div class="form-row">  
+            <div class="form-group col-md-7">
+              <label for="selecao-categoria-adm">Categoria:</label>
+              <select class="form-control" id="selecao-categoria-adm">
+                <option disabled selected>---</option>
+                <option>Tabuleiros</option>
+                <option>Cartas</option>
+                <option>Leitura</option>
+                <option>Xadrez</option>
+              </select> 
+            </div>
+            <div class="col-md-1"></div>
+
+            <div class="form-group col-md-4">
+              <label for="preco-produto-adm">Preço:</label>
+              <input type="text" class="form-control inputtext" id="preco-produto-adm" value="R$ 0,00">
+            </div>
+          </div>  
+
+          <div class="form-group">
+            <label for="descricao-produto-adm">Descrição:</label>
+             <textarea class="form-control" id="descricao-produto-adm" rows="9">descrição do produto...</textarea>
+          </div>
+
+        </form>
+
+        <div class="botao-produto-individual-adm">
+          <button type="button" class="btn btn-outline-danger ">voltar</button>
+           <button type="button" class="btn btn-outline-danger ">editar imagem</button>
+          <button type="button" class="btn btn-outline-danger ">excluir produto</button>
+          <button type="button" class="btn btn-outline-danger ">salvar alterações</button> 
+
+        </div>
+           
+      </div>  
+    </div>
+  </div>     
+</body>
+<!-- Importando Javascript do Bootstrap -->
+<script  src="assets/js/popper.min.js"></script>
+<script  src="assets/js/jQuery-3.2.1.slim.min.js"></script>
+<script  src="assets/js/bootstrap.min.js"></script>
+</html>
