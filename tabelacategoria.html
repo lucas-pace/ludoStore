@@ -44,8 +44,30 @@
   </nav>
   
    
+<div class="row categoriaInfo">
+  <div class="categoriaInfoBox">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-md-9">
+    <p class="categoriaInfoText"><input class="categoriaNomeInput" type="text" name="fname" value="Jogos De Tabuleiro"></p><br>
+     <p class="categoriaDescText">   
+    <TEXTAREA class= "categoriaDescInput"name="thetext" rows="3" cols="60">
+      Descrição da categoria, todas as informações nessa página são editaveis. Exemplo de texto filler, code, code, code, code, teste123.
+     </TEXTAREA>
+     <p></div><div class = "col">
+        <button type="submit" class="btn categoriaInputConfirm">
+          <div class="categoriaInputConfirmButtomWraper">
+            <i class="fa fa-check fa-lg categoriaInputConfirmButtom "></i>
+        </div>
+          </button>
+    </div>
 
- <div class=row>
+</div>
+  </form>
+  
+</div>
+</div>
+ <div class="row">
    <div class="col-md-11">
   <div class="container productTableContainer">
                 
@@ -53,7 +75,7 @@
         <thead class="thead">
           <tr>
             <th>Id</th>
-            <th>Nome do Produto</th>
+            <th>Nome do Produto na Categoria</th>
             <th>Delete</th>
           </tr>
         </thead>
@@ -191,7 +213,7 @@
                                   </td>
                                 </tr>
                                 <tr>
-            <td>0</td>
+            <td></td>
             <td>
                 <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
                 </td>
@@ -205,7 +227,7 @@
       </table>
 </div>
    </div>
-   <div class="col">
+   <div class="col-md-1">
       <div class="iconeAddProductTableWraper">
           <a href="/produto.html?" class="fa fa-plus iconeAddProductTable"></a>
         </div>
