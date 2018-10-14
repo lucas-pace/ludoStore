@@ -1,0 +1,34 @@
+
+.corpo {
+	margin-bottom: 0;
+	margin-top: 0;
+	width: 100%;
+	height: 60%;	
+}
+.texto hr {
+	color: white;
+	margin: 0;
+}
+.texto {
+	margin-top: 40px;
+	margin-left: 80px;
+	margin-right: 160px;
+	padding-left: 80px;
+	padding-right: 80px;	
+	text-align: justify;	
+	padding-top: 10px;
+	padding-bottom: 25px;
+	font-family: arial;
+	background-color: white;#db7c26
+	line-height: 25px;
+}
+
+@media(max-width: 1000px) {
+
+	.texto{
+		margin:0!important;
+		padding: 0!important;
+		width: 100%!important;
+		text-align: justify;
+	}
+	}
