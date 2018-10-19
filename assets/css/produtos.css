@@ -1,0 +1,43 @@
+.titulo
+{
+    font-size: 36px;
+    color: #8b0000;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+    font-family: "dragonslapper";
+}
+.botao
+{
+    font-size: 18px;
+    border: 1px solid #8b0000;
+    
+    text-align: center;
+    color: #8b0000;
+    margin-bottom: 15px;
+
+}
+.botao:hover
+{
+    font-size: 18px;
+    border: 1px solid #8b0000;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #8b0000;
+
+}
+.btn-default:active .botao:active
+{
+    background-color: #8b0000;
+    color: white;
+}
+
+.figure-caption
+{
+    font-size: 90%;
+    color: #8b0000;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
