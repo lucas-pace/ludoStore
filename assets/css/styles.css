@@ -42,6 +42,7 @@
 	margin-left:10px;
 	height: 100%;
 	width: 100%;
+	font-family: "Rubik-Regular";
 }
 
 .descricao-produto h1{
@@ -49,20 +50,23 @@
 	margin-bottom: 17px;
 	font-size: 35px;
 	text-align: left;
-	font-family: "Rubik-Regular";
 }
 
 .descricao-produto h2{
-	font-size: 18px;
+	font-size: 17px;
 	text-align: left;
-	font-family: "Rubik-Regular";
-	margin-top: 20px;
+	margin-top: 25px;
 	margin-bottom: 13px;
 }
 
 .descricao-produto h3{
-	font-size: 17px;
-	font-family: "Rubik-Regular";
+	font-size: 16px;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.descricao-produto p{
+	font-size: 18px;
 	text-align: left;
 	margin-bottom: 30px;
 }
@@ -87,7 +91,11 @@
 
 .imagem-produto-individual-adm {
     position: relative;
-    margin-top: 70px;
+    margin-top: 43px;
+}
+
+.imagem-produto-individual-adm img{
+   width: 400px;
 }
 
 .botao-produto-individual-adm button{
@@ -99,12 +107,13 @@
 }
 
 .botao-produto-individual-adm{
-	margin-top: 30px;
-	text-align: center;
+	margin-top: 20px;
+	text-align: right;
 }
 
-.botao-produto-individual-adm-editar{
-	margin-top: 20px;
+.botao-editar-imagem-prodADM {
+	text-align: left;
+	margin-left: -10px;
 }
 
 /* TABELA DE CATEGORIAS ADM*/
@@ -163,7 +172,8 @@ li{
 /* HOME*/
 
 .carousel-inner img {
-    max-height: 450px;
+	height: 440px;
+	width: 400px;
 } 
 
 .breve-descricao{
@@ -195,14 +205,11 @@ li{
 	margin-bottom: 15px;
 	background-size: contain;
 	background-repeat: no-repeat;
+	text-align: center;
 }	
 
 .miniatura a{
 	text-decoration: none;
-}
-
-.test{
-	text-align: center;
 }
 
 .blackbox{ 
@@ -264,13 +271,27 @@ li{
 
 /* MODIFICAÇÕES PARA MOBILE*/
 
-@media(max-width: 1000px) {
+@media(max-width: 1050px) {
 /* HOME*/
 .miniatura img{
 	max-width: 100%;
 	background-size: 100%;
 	text-align: center;
 }
+
+.carousel-inner img {
+    height: 350px;
+} 
+
+.breve-descricao img{
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.slide-index{
+   text-align: center;
+   margin-top: 50px;
+ }
 
 .blackbox {
 	opacity: 0;
@@ -288,7 +309,16 @@ li{
     text-align: center;
 }
 
+.botao-produto-individual-adm{
+	margin-top: 20px;
+	text-align: center;
 }
+
+.title-produto-individual-adm{
+	margin-top: 5px;
+}
+}
+
 
 /* FONTES*/
 
@@ -310,5 +340,3 @@ li{
   font-family: "MedievalSharp";
   src: url('../fontes/MedievalSharp.ttf') format('truetype');
 }
-
-
