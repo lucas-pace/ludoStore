@@ -52,7 +52,7 @@ body{
 	 text-decoration:none !important;
  }
  .modal-content {
-	background-color: #dc3545;
+	background-color: #920000;
  }
  
  .modal-body{
@@ -66,8 +66,7 @@ body{
 
  .dad {
 	 padding-top: 15px;
-	 
-	 
+	  
  }
 .dad2 {
 	margin-top: 30px;
@@ -88,9 +87,7 @@ body{
 .modal_button {
 	margin-top: 10px;
 	 margin-bottom: 10px;
-	 margin-left: 100px;
-	 
-	
+	 margin-left: 100px;	
 }
  .modal-body button {	 
 	 text-decoration:none!important;
@@ -104,6 +101,13 @@ body{
   {
 	  background-color: #920000;
   }
-  .navbar-brand a {
+  .lud {
 	font-family: "dragonslapper" !important;
+	text-decoration-color: aliceblue;
+  }
+
+ .navbar-brand
+  {
+	  color: #fff;
+	 /* font-weight: bold;*/
   }
