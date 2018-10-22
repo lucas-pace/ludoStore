@@ -53,6 +53,7 @@ body{
  }
  .modal-content {
 	background-color: #dc3545;
+	border-radius: 5%;
  }
  
  .modal-body{
@@ -66,6 +67,7 @@ body{
 
  .dad {
 	 padding-top: 15px;
+	 padding-left:140px;
 	 
 	 
  }
