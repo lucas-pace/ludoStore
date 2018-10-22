@@ -71,3 +71,7 @@ body{
 	  color:white;
 	  text-decoration:none !important;
   }
+  .navbar-default
+  {
+	  background-color: #920000;
+  }
