@@ -104,3 +104,6 @@ body{
   {
 	  background-color: #920000;
   }
+  .navbar-brand a {
+	font-family: "dragonslapper" !important;
+  }
