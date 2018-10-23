@@ -113,7 +113,7 @@
     margin-top: 2px;
     font-size: 19px !important;
     vertical-align: center;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 
  }
  .iconeDeleteProductTableWraper:hover{
@@ -122,7 +122,7 @@
   
 }
   
-.iconeAddProductTable:hover{
+.iconeAddProductTableWraper:hover .iconeAddProductTable{
   text-decoration: none;
   color: #920000;
 
@@ -152,9 +152,9 @@ background-color: #FFFFFF;
 
 }
 
-.iconeDeleteProductTable:hover{
+.iconeDeleteProductTableWraper:hover .iconeDeleteProductTable{
 text-decoration: none;
-color: #920000;
+color: #920000 !important;
 
 }
   table.table-bordered{
@@ -205,8 +205,8 @@ color: #920000;
     
   }
   .categoriaInputConfirmButtomWraper{
-    height: 35px;
-    width: 36px;
+    height: 30px;
+    width: 30px;
     background-color:#920000;
     border-radius:50pc;
   }
@@ -216,12 +216,12 @@ color: #920000;
   }
   .categoriaInputConfirmButtom{
     color: #FFFFFF;
-    font-size: 34px;
+    font-size: 37px;
       
-      margin-top: -100px;
+      margin-top: -150px;
   }
   
-  .categoriaInputConfirmButtom:hover{
+  .categoriaInputConfirmButtomWraper:hover .categoriaInputConfirmButtom{
     color: #920000;
     
   }
