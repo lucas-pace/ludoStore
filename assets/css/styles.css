@@ -83,7 +83,7 @@
 }
 
 .title-produto-individual-adm{
-	margin-top: 30px;
+	margin-top: 57px;
 	margin-bottom: 30px;
 	font-size: 35px;
 	text-align: left;
@@ -91,11 +91,11 @@
 
 .imagem-produto-individual-adm {
     position: relative;
-    margin-top: 43px;
+    margin-top: 63px;
 }
 
 .imagem-produto-individual-adm img{
-   width: 400px;
+   width: 405px;
 }
 
 .botao-produto-individual-adm button{
