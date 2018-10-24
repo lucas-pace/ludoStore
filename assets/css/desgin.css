@@ -116,3 +116,27 @@ body{
   {
 	  background-color: rgb(146, 143, 143);
   }
+
+.img-200-200 {
+	width: 300px!important;
+ }
+
+ .img-uno-200-200 {
+	width: 265px!important;
+ }
+
+ .img-black-200-200 {
+	width: 205px!important;
+ }
+
+ .card:hover
+ {
+	-webkit-box-shadow: -1px 9px 40px -12px #920000;
+	-moz-boz-shadow: -1px 9px 40px -12px #920000;
+	box-shadow: -1px 9px 40px -12px #920000;
+ }
+
+ .img-monica-200-200
+ {
+	 width: 340px!important;
+ }

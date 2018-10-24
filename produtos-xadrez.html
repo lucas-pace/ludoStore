@@ -5,19 +5,19 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href = "assets/css/produtos.css">
+  <link rel="stylesheet" href = "assets/css/produtos.css">
+  <link rel="stylesheet" href = "assets/css/desgin.css">
 	<link rel="stylesheet" href = "assets/css/yan.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href = "assets/css/desgin.css">
   <link rel="icon" type="imagem/png" href="assets/imagem/agora-logo.png">
 	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/js/scripts.js">
 	<link href="https://fonts.googleapis.com/css?family=Belleza|MedievalSharp" rel="stylesheet">
-	<title >LudoStore</title>
+	<title class="lud">LudoStore</title>
 </head>
 
 <body>
-	<nav class= "navbar navbar-fixed-top navbar-expand-lg navbar-default navbar-dark">
+  <nav class= "navbar navbar-fixed-top navbar-expand-lg navbar-default navbar-dark">
 		<a class="navbar-brand" href="index.html">
 			<img src="assets/imagem/agora-logo.png" width="100" height="100" alt="Logo LudoStore">
 		</a>
@@ -76,7 +76,7 @@
 																																		
 											</div>    
 							
-											</form> 
+									</form> 
 		
 							</div>					
 		
@@ -85,7 +85,7 @@
 		</div>
   <br>
   <div class="galeria">
-    <h1 class="titulo">Jogos de Xadrez</h1>
+    <h1 class="titulo">Jogos de Tabuleiros</h1>
   </div>
   <div class="container">
     <div class="row">
@@ -103,42 +103,62 @@
       <button class="btn btn-default botao" data-filter="adulto">Adulto</button>
   </div> 
   <br>
-<section>  
-  <div class = "container">
-      <div class="row">
-        <div class="col-md-4 filter infantil" >
-          <a href="#"><img src="fotos/mario.jpg" class="img-fluid"></a>
-          <figcaption class = "figure-caption bg-light text-center" >Mario Bros</figcaption>
-          <figcaption class = "figure-caption bg-light text-center">R$20,00</figcaption>
-        </div>
-        <div class="col-md-4 filter infantil">
-          <a href="#"><img src="fotos/bichos.jpg" class="img-fluid"></a>
-          <figcaption class = "figure-caption bg-light text-center">Bichinhos</figcaption>
-          <figcaption class = "figure-caption bg-light text-center">R$20,00</figcaption>
-        </div>
-        <div class="col-md-4 filter infantil">
-          <a href="#"><img src="fotos/moveis.jpg" class="img-fluid"></a>
-          <figcaption class = "figure-caption bg-light text-center">Mini Móveis</figcaption>
-          <figcaption class = "figure-caption bg-light text-center">R$20,00</figcaption>
-        </div>
-        <div class="col-md-4 filter adulto">
-          <a href="#"><img src="fotos/harry.jpg" class="img-fluid"></a>
-          <figcaption class = "figure-caption bg-light text-center">Harry Potter</figcaption>
-          <figcaption class = "figure-caption bg-light text-center">R$20,00</figcaption>
-        </div>
-        <div class="col-md-4 filter adulto">
-          <a href="#"><img src="fotos/aneis.jpg" class="img-fluid"></a>
-          <figcaption class = "figure-caption bg-light text-center">Senhor dos Anéis</figcaption>
-          <figcaption class = "figure-caption bg-light text-center">R$20,00</figcaption>
-        </div>
-        <div class="col-md-4 filter adulto">
-          <a href="#"><img src="fotos/guerra civil.jpg" class="img-fluid"></a>
-          <figcaption class = "figure-caption bg-light text-center">Guerra Civil Americana</figcaption>
-          <figcaption class = "figure-caption bg-light text-center">R$20,00</figcaption>
+<div class="container"> 
+  <div class="row mb-5">
+        <div class="card-columns">
+                <div class="card filter infantil" style="width: 20rem;">
+                        <img class="card-img-top img-200-200" src="fotos/bichos.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title lud">Bichos</h5>
+                                <p class="card-text">R$20,00</p>
+                                <a href="produto-individual.html" class="btn btn-default botao">Mais</a>
+                            </div>
+                    </div>
+                <div class="card filter infantil" style="width: 20rem;">
+                        <img class="card-img-top img-200-200" src="fotos/mario.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title lud">Mario Bros</h5>
+                                <p class="card-text">R$20,00</p>
+                                <a href="produto-individual.html" class="btn btn-default botao">Mais</a>
+                            </div>
+                </div>
+                <div class="card filter infantil" style="width: 20rem;">
+                        <img class="card-img-top img-200-200" src="fotos/moveis.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title lud">Mini Moveis</h5>
+                                <p class="card-text">R$20,00</p>
+                                <a href="produto-individual.html" class="btn btn-default botao">Mais</a>
+                            </div>
+                </div>
+                <div class="card filter adulto" style="width: 20rem;">
+                        <img class="card-img-top img-200-200" src="fotos/guerra civil.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title lud">Guerra Civil Americana</h5>
+                                <p class="card-text">R$20,00</p>
+                                <a href="produto-individual.html" class="btn btn-default botao">Mais</a>
+                            </div>
+                </div>
+                <div class="card filter adulto" style="width: 20rem;">
+                        <img class="card-img-top img-200-200" src="fotos/harry.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title lud">Harry Potter</h5>
+                                <p class="card-text">R$20,00</p>
+                                <a href="produto-individual.html" class="btn btn-default botao">Mais</a>
+                            </div>
+                </div>
+                <div class="card filter adulto" style="width: 20rem;">
+                        <img class="card-img-top img-200-200" src="fotos/aneis.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title lud">Lord of the Rings</h5>
+                                <p class="card-text">R$20,00</p>
+                                <a href="produto-individual.html" class="btn btn-default botao">Mais</a>
+                            </div>
+                </div>
+            </div>
+                      
         </div>
     </div>
-  </div>
-</section>
+</div>
 <footer class="page-footer"> 
  
  <div class ="row">
