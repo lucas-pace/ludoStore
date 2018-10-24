@@ -52,8 +52,10 @@ body{
 	 text-decoration:none !important;
  }
  .modal-content {
-	background-color: #dc3545;
+
+	background-color: #920000;
 	border-radius: 5%;
+
  }
  
  .modal-body{
@@ -67,9 +69,13 @@ body{
 
  .dad {
 	 padding-top: 15px;
+<<<<<<< HEAD
 	 padding-left:140px;
 	 
 	 
+=======
+	  
+>>>>>>> master
  }
 .dad2 {
 	margin-top: 30px;
@@ -90,9 +96,7 @@ body{
 .modal_button {
 	margin-top: 10px;
 	 margin-bottom: 10px;
-	 margin-left: 100px;
-	 
-	
+	 margin-left: 100px;	
 }
  .modal-body button {	 
 	 text-decoration:none!important;
@@ -101,4 +105,23 @@ body{
   .modal-body button:hover,.modal-footer button :active{
 	  color:white;
 	  text-decoration:none !important;
+  }
+  .navbar-default
+  {
+	  background-color: #920000;
+  }
+  .lud {
+	font-family: "dragonslapper" !important;
+	text-decoration-color: aliceblue;
+  }
+
+ .navbar-brand
+  {
+	  color: #fff;
+	 /* font-weight: bold;*/
+  }
+
+  .adm
+  {
+	  background-color: rgb(146, 143, 143);
   }
