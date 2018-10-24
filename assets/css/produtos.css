@@ -7,13 +7,17 @@
     margin-bottom: 70px;
     font-family: "dragonslapper";
 }
-.busca-bloco {
-    text-align: right;
-    
 
+.bsc {
+ margin-top: 10px;   
+ padding-top:-15px; 
+ display: inline-block;
+ 
 
-
+ 
 }
+
+
 .botao
 {
     font-size: 18px;
@@ -46,5 +50,7 @@
     color: #8b0000;
     text-transform: uppercase;
     font-weight: 600;
+}
+
 }
 
