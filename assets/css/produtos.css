@@ -1,3 +1,6 @@
+.body{
+    margin:0px;
+}
 .titulo
 {
     font-size: 36px;
@@ -9,12 +12,20 @@
 }
 
 .bsc {
+    
+ height: 30px;
+ width: 65px;   
  margin-top: 10px;   
  padding-top:-15px; 
  display: inline-block;
- 
+ border: 
 
- 
+}
+.busca-bloco {
+    text-align: right;
+}
+.busca-bloco input {
+    border-radius: 5%;
 }
 
 
