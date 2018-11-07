@@ -26,6 +26,13 @@
 	font-size: 45px;
 }
 
+.confirmacao-contato p{
+	text-align: center;
+	color: #8B0000;
+	margin-bottom: 50px;
+	font-weight: bold;
+}
+
 /* PAGINA DO PRODUTO INDIVIDUAL*/
 
 .descricao-produto{

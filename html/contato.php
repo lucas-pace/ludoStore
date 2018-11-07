@@ -81,7 +81,8 @@
 						</div>
 			</div>
 		</div>
-    <br>
+    <br>                 
+
 
   <div class="container">
     <div class="row">
@@ -97,45 +98,156 @@
              <h1><b>Fale Conosco</b></h1>
         </div>
           
-          <form>
+          <form action="contato.php" method="post">
 
               <div class="form-group nome-contato">
                     <label for="nome-contato">Nome</label>
-                    <input type="text" class="form-control" id="nome-contato" placeholder="┬┴┬┴┤(･_├┬┴┬┴">
+                    <input type="text" name="nome" class="form-control field" id="nome-contato" placeholder="┬┴┬┴┤(･_├┬┴┬┴" required>
 
               </div>
 
               <div class="form-group">
-                                  <label for="email">Email</label>
-                    <input type="seu email" class="form-control" id="email" placeholder="(≧▽≦)/">    
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control field"  placeholder="(≧▽≦)/" required>    
               </div>
                 
               <div class="form-group">
                
                 <label for="selecao-assunto">Assunto</label>
-                <select class="form-control" id="selecao-assunto">
-                  <option disabled selected>(・・ ) ? </option>
-                  <option>Sugestões</option>
-                  <option>Dúvidas</option>
-                  <option>Elogios</option>
-                  <option>Criticas</option>
-                  <option>Outros</option>
+                <select class="form-control"  name="assunto" required>
+                  <option disabled selected value="" >(・・ ) ? </option>
+                  <option value="Sugestões">Sugestões</option>
+                  <option value="Dúvidas">Dúvidas</option>
+                  <option value="Elogios">Elogios</option>
+                  <option value="Criticas">Criticas</option>
+                  <option value="Outros">Outros</option>
                 </select> 
               </div>
 
               <div class="form-group mensagem-contato">
                 <label for="mensagem-contato">Mensagem</label>
-                <textarea class="form-control" id="mensagem-contato" rows="3" placeholder="__φ(．．) "></textarea>
+                <textarea class="form-control field" name="mensagem"  rows="3" placeholder="__φ(．．) " required></textarea>
               </div>
 
               <div class="contato-botao-enviar">
-                <button class="btn btn-outline-danger contato-botao" type="submit" value="enviar">enviar</button>
-              </div> 
+                <button class="btn btn-outline-danger contato-botao" type="submit" name="submit" value="enviar">enviar</button>
+              </div>
+              <br>  
         </form>
-       <br> 
+                            
+          <?php 
+
+
+                // Inserir Arquivos do PHPMailer
+                require '../assets/phpmailer/Exception.php';
+                require '../assets/phpmailer/PHPMailer.php';
+                require '../assets/phpmailer/SMTP.php';
+
+                // Usar as classes sem o namespace
+                use PHPMailer\PHPMailer\PHPMailer;
+                use PHPMailer\PHPMailer\Exception;
+
+
+                function clean_input($input){
+                    $input = trim($input);
+                    $input = stripslashes($input);
+                    $input = htmlspecialchars($input);
+
+                    return $input;
+                }
+
+                if($_SERVER['REQUEST_METHOD']== 'POST'){
+                    $nome=$_POST['nome'];
+                    $email=$_POST['email'];
+                    $mensagem=$_POST['mensagem'];
+                    $assunto=$_POST['assunto'];
+
+                    $nome= clean_input($nome);
+                    $email= clean_input($email);
+                    $mensagem= clean_input($mensagem);
+                    $texto_msg = 'E-mail enviado através da pagina de contato do site'
+                    . '<br><br>' . 
+                    'Nome: ' . $nome . '<br>' .
+                    'E-mail: ' . $email . '<br>' .
+                    'Mensagem: ' . $mensagem . '<br>' ;
+
+
+                    // Criação do Objeto da Classe PHPMailer
+                    $mail = new PHPMailer(true); 
+                    $mail->CharSet="UTF-8";
+
+
+                    try {       
+                        //$mail->SMTPDebug = 2;                                                       
+                        
+                        // Usar SMTP para o envio
+                        $mail->isSMTP();                                      
+
+                        // Detalhes do servidor (No nosso exemplo é o Google)
+                        $mail->Host = 'smtp.gmail.com';
+
+                        // Permitir autenticação SMTP
+                        $mail->SMTPAuth = true;                               
+
+                        // Nome do usuário
+                        $mail->Username = 'ludostore42@gmail.com';        
+                        // Senha do E-mail         
+                        $mail->Password = 'amelhorloja';                           
+                        // Tipo de protocolo de segurança
+                        $mail->SMTPSecure = 'tls';   
+
+                        // Porta de conexão com o servidor                        
+                        $mail->Port = 587;
+
+                        
+                        // Garantir a autenticação com o Google
+                        $mail->SMTPOptions = array(
+                            'ssl' => array(
+                                'verify_peer' => false,
+                                'verify_peer_name' => false,
+                                'allow_self_signed' => true
+                            )
+                        );
+
+                        // Remetente
+                        $mail->setFrom($email, $nome);
+                        
+                        // Destinatário
+                        $mail->addAddress('ludostore42@gmail.com', 'LudoStore');
+
+                        // Conteúdo
+
+                        // Define conteúdo como HTML
+                        $mail->isHTML(true);                                  
+
+                        // Assunto
+                        $mail->Subject = $assunto;
+                        $mail->Body    = $texto_msg;
+                        $mail->AltBody = $texto_msg;
+
+                        // Enviar E-mail
+                        $mail->send();
+                        $confirmacao = '☆*:.｡. Mensagem enviada com sucesso  ☆*:.｡.o(≧▽≦)o.｡.:*☆';
+                    } catch (Exception $e) {
+                        $confirmacao = 'A mensagem não foi enviada ･ﾟﾟ･(／ω＼)･ﾟﾟ･.';
+                    }
+                                           
+                } 
+
+          ?>
+
+        <?php if($_SERVER['REQUEST_METHOD']== 'POST'){ ?>
+          <div class="confirmacao-contato">
+           <p><?php echo $confirmacao; ?></p>
+          </div> 
+        <?php }; ?>
+
       </div>
     </div> 
-  </div> 
+</div> 
+
+
+
   <footer class="page-footer"> 
  
  <div class ="row">
