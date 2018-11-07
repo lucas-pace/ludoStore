@@ -4,6 +4,7 @@
 <head>
   <!-- Importando CSS do Bootstrap -->
   <meta charset="utf-8" />
+<<<<<<< HEAD
   <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../assets/css/desgin.css">
@@ -11,16 +12,30 @@
   <link rel="stylesheet" href="../../assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../../assets/css/yan.css">
+=======
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/desgin.css">
+
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/yan.css">
+>>>>>>> 48d22ec241e60066f4b11418d5c6a6d9d28e3f60
   <title>LudoStore</title>
 </head>
 
 <body>
   <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-danger">
+<<<<<<< HEAD
     <a class="navbar-brand" href="index.html">
       <img src="../../assets/imagem/agora-logo.png" width="50" height="50" alt="Logo LudoStore">
+=======
+    <a class="navbar-brand" href="index.php">
+      <img src="../assets/imagem/agora-logo.png" width="50" height="50" alt="Logo LudoStore">
+>>>>>>> 48d22ec241e60066f4b11418d5c6a6d9d28e3f60
     </a>
     <div class="container">
-      <a class="navbar-brand" href="index.html">LudoStore</a>
+      <a class="navbar-brand" href="index.php">LudoStore</a>
       <div class="collapse navbar-collapse" id="navbarSite">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
@@ -83,143 +98,143 @@
           <tr>
             <td>0</td>
             <td>
-                <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                 </td>
             <td>
                 <div class="iconeDeleteProductTableWraper">
-                    <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                    <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                   </div>
             </td>
           </tr>
           <tr>
               <td>0</td>
               <td>
-                  <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                  <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                   </td>
               <td>
                   <div class="iconeDeleteProductTableWraper">
-                      <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                      <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                     </div>
               </td>
             </tr>
             <tr>
                 <td>0</td>
                 <td>
-                    <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                    <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                     </td>
                 <td>
                     <div class="iconeDeleteProductTableWraper">
-                        <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                        <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                       </div>
                 </td>
               </tr>
               <tr>
                   <td>0</td>
                   <td>
-                      <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                      <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                       </td>
                   <td>
                       <div class="iconeDeleteProductTableWraper">
-                          <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                          <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                         </div>
                   </td>
                 </tr>
                 <tr>
                     <td>0</td>
                     <td>
-                        <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                        <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                         </td>
                     <td>
                         <div class="iconeDeleteProductTableWraper">
-                            <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                            <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                           </div>
                     </td>
                   </tr>
                   <tr>
                       <td>0</td>
                       <td>
-                          <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                          <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                           </td>
                       <td>
                           <div class="iconeDeleteProductTableWraper">
-                              <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                              <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                             </div>
                       </td>
                     </tr>
                     <tr>
                         <td>0</td>
                         <td>
-                            <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                            <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                             </td>
                         <td>
                             <div class="iconeDeleteProductTableWraper">
-                                <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                                <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                               </div>
                         </td>
                       </tr>
                       <tr>
                           <td>0</td>
                           <td>
-                              <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                              <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                               </td>
                           <td>
                               <div class="iconeDeleteProductTableWraper">
-                                  <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                                  <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                                 </div>
                           </td>
                         </tr>
                         <tr>
                             <td>0</td>
                             <td>
-                                <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                                <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                                 </td>
                             <td>
                                 <div class="iconeDeleteProductTableWraper">
-                                    <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                                    <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                                   </div>
                             </td>
                           </tr>
                           <tr>
                               <td>0</td>
                               <td>
-                                  <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                                  <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                                   </td>
                               <td>
                                   <div class="iconeDeleteProductTableWraper">
-                                      <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                                      <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                                     </div>
                               </td>
                             </tr>
                             <tr>
                                 <td>0</td>
                                 <td>
-                                    <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                                    <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                                     </td>
                                 <td>
                                     <div class="iconeDeleteProductTableWraper">
-                                        <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                                        <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                                       </div>
                                 </td>
                               </tr>
                               <tr>
                                   <td>0</td>
                                   <td>
-                                      <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                                      <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                                       </td>
                                   <td>
                                       <div class="iconeDeleteProductTableWraper">
-                                          <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                                          <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                                         </div>
                                   </td>
                                 </tr>
                                 <tr>
             <td></td>
             <td>
-                <a class="hiperlinkProductTable"href="/produtos.html/?id=1" >Produto1</a>
+                <a class="hiperlinkProductTable"href="/produtos.php/?id=1" >Produto1</a>
                 </td>
             <td>
                 <div class="iconeDeleteProductTableWraper">
-                    <a href="/delete.html?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
+                    <a href="/delete.php?id=1" class="fa fa-trash-o iconeDeleteProductTable"></a>
                   </div>
             </td>
           </tr>
@@ -229,7 +244,7 @@
    </div>
    <div class="col-md-1">
       <div class="iconeAddProductTableWraper">
-          <a href="/produto.html?" class="fa fa-plus iconeAddProductTable"></a>
+          <a href="/produto.php?" class="fa fa-plus iconeAddProductTable"></a>
         </div>
 
    </div>    
@@ -318,8 +333,14 @@
 </body>
 
 <!-- Importando Javascript do Bootstrap -->
+<<<<<<< HEAD
 <script src="../../assets/js/popper.min.js"></script>
 <script src="../../assets/js/jQuery-3.2.1.slim.min.js"></script>
 <script src="../../assets/js/bootstrap.min.js"></script>
+=======
+<script src="../assets/js/popper.min.js"></script>
+<script src="../assets/js/jQuery-3.2.1.slim.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+>>>>>>> 48d22ec241e60066f4b11418d5c6a6d9d28e3f60
 
 </html>

@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../assets/css/footer-ADM-styles.css" rel="stylesheet">
+=======
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/footer-ADM-styles.css" rel="stylesheet">
+>>>>>>> 48d22ec241e60066f4b11418d5c6a6d9d28e3f60
     
 
   </head>

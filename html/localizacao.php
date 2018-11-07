@@ -16,7 +16,11 @@
 
 <body>
 	<nav class="navbar navbar-fixed-top navbar-expand-lg navbar-default navbar-dark">
+<<<<<<< HEAD
 		<a class="navbar-brand" href="index.html">
+=======
+		<a class="navbar-brand" href="index.php">
+>>>>>>> 48d22ec241e60066f4b11418d5c6a6d9d28e3f60
 			<img src="../assets/imagem/agora-logo.png" width="100" height="100" alt="Logo LudoStore">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite" aria-controls="navbarSite"
@@ -24,21 +28,21 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="container">
-			<a class="navbar-brand lud" href="index.html">LudoStore</a>
+			<a class="navbar-brand lud" href="index.php">LudoStore</a>
 			<div class="collapse navbar-collapse" id="navbarSite">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item lud"><a class="nav-link" href="index.html">Home</a></li>
+					<li class="nav-item lud"><a class="nav-link" href="index.php">Home</a></li>
 					<li class="nav-item dropdown lud"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Produtos</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item lud" href="produtos-tabuleiros.html">Tabuleiros</a>
-							<a class="dropdown-item lud" href="produtos-cartas.html">Cartas</a>
-							<a class="dropdown-item lud" href="produtos-leitura.html">Quadrinhos</a>
-							<a class="dropdown-item lud" href="produtos-xadrez.html">Xadrez</a>
+							<a class="dropdown-item lud" href="produtos-tabuleiros.php">Tabuleiros</a>
+							<a class="dropdown-item lud" href="produtos-cartas.php">Cartas</a>
+							<a class="dropdown-item lud" href="produtos-leitura.php">Quadrinhos</a>
+							<a class="dropdown-item lud" href="produtos-xadrez.php">Xadrez</a>
 						</div>
 					</li>
-					<li class="nav-item lud"><a class="nav-link" href="quem_somos.html">Quem Somos</a></li>
-					<li class="nav-item lud"><a class="nav-link" href="contato.html">Contato</a></li>
-					<li class="nav-item lud"><a class="nav-link" href="localizacao.html">Local</a></li>
+					<li class="nav-item lud"><a class="nav-link" href="quem_somos.php">Quem Somos</a></li>
+					<li class="nav-item lud"><a class="nav-link" href="contato.php">Contato</a></li>
+					<li class="nav-item lud"><a class="nav-link" href="localizacao.php">Local</a></li>
 				</ul>
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item mass lud"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#Login">Login</button></li>
