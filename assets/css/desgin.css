@@ -69,13 +69,9 @@ body{
 
  .dad {
 	 padding-top: 15px;
-<<<<<<< HEAD
 	 padding-left:140px;
 	 
-	 
-=======
-	  
->>>>>>> master
+	
  }
 .dad2 {
 	margin-top: 30px;
@@ -127,15 +123,25 @@ body{
   }
 
 .img-200-200 {
-	width: 300px!important;
+	width: 200px!important;
+
  }
 
- .img-uno-200-200 {
-	width: 265px!important;
+ .tabela{
+ text-align: center;
+ margin-bottom: 30px;
  }
 
- .img-black-200-200 {
-	width: 205px!important;
+ .menu-categ{
+ 	margin-bottom: 30px;
+ 	size: 100%;
+ 	margin-left: 30px;
+ }
+
+
+ .tabela img{
+ text-align: center;
+ margin-top: 20px;
  }
 
  .card:hover
@@ -145,7 +151,23 @@ body{
 	box-shadow: -1px 9px 40px -12px #920000;
  }
 
- .img-monica-200-200
- {
-	 width: 340px!important;
- }
+ 
+@media(min-width: 576px){
+.card-columns {
+
+ column-count: auto;
+}
+
+}
+.card{
+	margin-right: 10px;
+}
+
+.list-group-item-light
+{
+	background-color: #920000!important;
+}
+.list-group-item-light:hover
+{
+	background-color: #920000!important;
+}
