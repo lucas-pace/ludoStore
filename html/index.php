@@ -1,22 +1,33 @@
 <!DOCTYPE html>
+<?php
+$servername = "localhost";
+$username = "yan";
+$password = "root";
+$dbname = "ludoStore";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+?>
 <html>
 <head>
 	<!-- Importando CSS do Bootstrap -->
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href = "assets/css/desgin.css">
-	<link rel="stylesheet" href = "assets/css/yan.css">
-	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href = "../assets/css/desgin.css">
+	<link rel="stylesheet" href = "../assets/css/yan.css">
+	<link rel="stylesheet" href="../assets/css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/js/scripts.js">
+	<link rel="stylesheet" href="../assets/js/scripts.js">
 	<title>LudoStore</title>
 </head>
 
 <body>
 	<nav class= "navbar navbar-fixed-top navbar-expand-lg navbar-default navbar-dark">
 		<a class="navbar-brand" href="index.html">
-			<img src="assets/imagem/agora-logo.png" width="100" height="100" alt="Logo LudoStore">
+			<img src="../assets/imagem/agora-logo.png" width="100" height="100" alt="Logo LudoStore">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite" aria-controls="navbarSite" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -57,7 +68,7 @@
 											<div class="caixa_login">  
 												
 												<label class="dad lud">Login</label>  <br>
-												<img src="assets/imagem/agora-logo.png">
+												<img src="../assets/imagem/agora-logo.png">
 												<div class="dad2 lud">
 												<label >Usuario: </label>	<input type="text" title="usuario" placeholder=""><br>    
 												<div class="dad3 lud"><label>Senha: </label><input type="password" title="senha" placeholder="">
@@ -86,19 +97,41 @@
 		<div class="row">
 
 			<div class="col-sm-5 slide-index">
+				<div class="carousel-inner">
 
-				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  >
-				  <div class="carousel-inner">
-				    <div class="carousel-item active">
-				      <a href="produto-individual.html"><img class="d-block w-100" src="fotos/content_ajm001_3d-box_400px.png" alt="ultimos produtos lançados"></a>
-				    </div>
-				    <div class="carousel-item">
-				      <a href="produto-individual.html"><img class="d-block w-100" src="fotos/content_azu001_3d-box_400px.png" alt="ultimos produtos lançados"></a>
-				    </div>
-				    <div class="carousel-item">
-				      <a href="produto-individual.html"><img class="d-block w-100" src="fotos/content_blb001_3d-box_400px.png" alt="ultimos produtos lançados"></a>
-				    </div>
-				  </div>
+					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  >
+				  
+					
+						<?php
+
+						$sql = "select * from produto order by id_produto  desc limit 3;";
+						$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+			
+						
+							while($row = $result->fetch_assoc()) {
+								
+								print("				
+								<div class='carousel-item active'>
+								<a href='produto-individual.html'> <img class='d-block w-100' src='". $row["url_image"]."' alt='ultimos produtos lançados'></a>
+								</div>
+						
+								");	
+							
+							}
+						} else {
+							echo "
+							<h5 style:'text-color:red'>ERROR<h5>
+							
+							";
+						}
+						
+							
+
+						?>				  
+				 
+				    
+					</div>
 				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				    <span class="sr-only">Previous</span>
@@ -107,6 +140,7 @@
 				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 				    <span class="sr-only">Next</span>
 				  </a>
+				
 				</div>
 
 			</div>
@@ -116,7 +150,7 @@
 			<div class="col-sm-6">
 				<div class="breve-descricao">
 
-					<img src="img/logo-texto.jpg" class="img-fluid" alt="logo da LudoStore">
+					<img src="../img/logo-texto.jpg" class="img-fluid" alt="logo da LudoStore">
 					<p>Alguns jogos de tabuleiro (board games) e de cartas (card games) são milenários, principalmente porque podem ser jogados por qualquer um... Seja um casal de namorados, avós com seus filhos e netos ou um grupo de amigos.</p>
 					<p>Temos orgulho de oferecer jogos de tabuleiro modernos de alta qualidade ao público brasileiro!</p>
 					<p>Aqui você encontra jogos que inserem os jogadores em uma nova realidade, seja o desafio voltado para estratégia, para tática ou apenas para um momento de festa. Muito mais do que simplesmente rolar um dado e andar algumas casas!</p>
@@ -132,63 +166,42 @@
 		</div>
 
 		<div class="row col-12">	
+			<?php
+			$sql = "select * from produto order by produto.preco  asc limit 4;";
+			$result = $conn->query($sql);
 			
-			<div style="background-image: url('fotos/content_ltc_3d-box_400px.jpg')" class ="miniatura">
-				<a href="produto-individual.html">
-				<div class= "blackbox">	
-					<div class="blackbox-text">
-						<h1><b>O Senhor dos Anéis: O Confronto</b></h1>
-						<h2> Chegou a hora do confronto final entre os povos livres do oeste e o Senhor do Escuro, Sauron, na Terra-média. </h2>
+			if ($result->num_rows > 0) {
+
+			
+				while($row = $result->fetch_assoc()) {
+					
+					echo (				
+
+
+					"<div style='background-image: url('" . $row["url_image"] . "')' class ='miniatura'>
+					<a href='produto-individual.html'>
+				<div class= 'blackbox'>	
+					<div class='blackbox-text'>
+						<h1><b>' " . $row["nome_produto"]. " '</b></h1>
+						<h2>'" . $row["descricao"] ." '</h2>
 					</div>
 				</div>
 			    </a>
-			</div>
-
-			<div style="background-image: url('fotos/content_dow002_3d-box_400px.jpg')" class ="miniatura">
-				<a href="produto-individual.html">
-				<div class= "blackbox">	
-					<div class="blackbox-text">
-						<h1><b>Dead of Winter:<br>A Noite Sem Fim</b></h1>
-						<h2> A colônia está começando a se tornar um lar. Mas essa alegria vai durar pouco - como todas desde que tudo isso começou. </h2>
-					</div>
-				</div>
-			    </a>
-			</div>
-
-			<div style="background-image: url('fotos/content_kro101_3d-box_400px.jpg')" class ="miniatura">
-				<a href="produto-individual.html">
-				<div class= "blackbox">	
-					<div class="blackbox-text">
-						<h1><b>Krosmaster Arena 2.0</b></h1>
-						<h2>Na dimensão paralela do Extramundo, os Demônios das Horas adoram se ausentar do trabalho de observadores do tempo para irem até a Arena.</h2>
-					</div>
-				</div>
-			    </a>
-			</div>
-
-			<div style="background-image: url('fotos/content_swl001_3d-box_400px.png')" class ="miniatura">
-				<a href="produto-individual.html">
-				<div class= "blackbox">	
-					<div class="blackbox-text">
-						<h1>Star Wars Legion</h1>
-						<h2>O Império Galático fecha o cerco por toda a galáxia utilizando de um poderio militar impiedoso.</h2>
-					</div>
-				</div>
-			    </a>
-			</div>
-
-			<div style="background-image: url('fotos/content_blr001_3d-box_400px.png')" class ="miniatura">
-				<a href="produto-individual.html">
-				<div class= "blackbox">	
-					<div class="blackbox-text">
-						<h1><b>Blood Rage</b></h1>
-						<h2>Irmãos se enfrentarão no final sangrento;
-						E os filhos de irmãos trairão seus irmãos.
-						A desgraça está no mundo, com muita imoralidade.</h2>
-					</div>
-				</div>
-				</a>
-			</div>
+				</div>");
+				
+					
+				
+				}
+			} else {
+				echo "
+				<h5 style:'text-color:red'>ERROR<h5>
+				
+				";
+			}
+			
+			
+	         ?>
+			>
 		</div> 
 		<br> 	
 	</div>  
@@ -269,7 +282,7 @@
 </body>
 
 <!-- Importando Javascript do Bootstrap -->
-<script  src="assets/js/popper.min.js"></script>
-<script  src="assets/js/jQuery-3.2.1.slim.min.js"></script>
-<script  src="assets/js/bootstrap.min.js"></script>
+<script  src="../assets/js/popper.min.js"></script>
+<script  src="../assets/js/jQuery-3.2.1.slim.min.js"></script>
+<script  src="../assets/js/bootstrap.min.js"></script>
 </html>
