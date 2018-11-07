@@ -16,15 +16,7 @@
 </head>
 <body>
   <nav class= "navbar navbar-fixed-top navbar-expand-lg navbar-default navbar-dark">
-<<<<<<< HEAD
-		<a class="navbar-brand" href="index.html">
-=======
-		<a class="navbar-brand" href="index.php">
->>>>>>> 48d22ec241e60066f4b11418d5c6a6d9d28e3f60
-			<img src="../assets/imagem/agora-logo.png" width="100" height="100" alt="Logo LudoStore">
-		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite" aria-controls="navbarSite" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class ="container">
 			<a class="navbar-brand lud" href="index.php">LudoStore</a>
