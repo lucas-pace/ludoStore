@@ -4,20 +4,20 @@
 <head>
   <!-- Importando CSS do Bootstrap -->
   <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/desgin.css">
+  <link rel="stylesheet" href="../../assets/css/desgin.css">
 
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../assets/css/yan.css">
+  <link rel="stylesheet" href="../../assets/css/yan.css">
   <title>LudoStore</title>
 </head>
 
 <body>
   <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-danger">
-    <a class="navbar-brand" href="index.php">
-      <img src="../assets/imagem/agora-logo.png" width="50" height="50" alt="Logo LudoStore">
+    <a class="navbar-brand" href="index.html">
+      <img src="../../assets/imagem/agora-logo.png" width="50" height="50" alt="Logo LudoStore">
     </a>
     <div class="container">
       <a class="navbar-brand" href="index.php">LudoStore</a>
@@ -296,8 +296,14 @@
 </body>
 
 <!-- Importando Javascript do Bootstrap -->
+<<<<<<< HEAD
+<script src="../../assets/js/popper.min.js"></script>
+<script src="../../assets/js/jQuery-3.2.1.slim.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+=======
 <script src="../assets/js/popper.min.js"></script>
 <script src="../assets/js/jQuery-3.2.1.slim.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
+>>>>>>> 48d22ec241e60066f4b11418d5c6a6d9d28e3f60
 
 </html>
