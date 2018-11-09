@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
 $servername = "localhost";
-$username = "yan";
-$password = "root";
+$username = "root";
+$password = "yan";
 $dbname = "ludoStore";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
