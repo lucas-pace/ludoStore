@@ -1,25 +1,62 @@
 <?php include 'navbar.php';?> 
 		
 	<div class="container">
+		<?php 
+			$cod_produto= $_GET['produto'];
+
+            $server = 'localhost';
+            $user = 'root';
+            $password = '';
+            $db_name = 'ludostore';
+            $port = '3306';
+
+            $db_connect = new mysqli($server,$user,$password,$db_name,$port);
+            mysqli_set_charset($db_connect,"utf8");
+
+            if ($db_connect->connect_error == true) {
+                echo 'Falha: ' . $db_connect->connect_error;
+            } else { 
+
+               $sql="SELECT * FROM produto WHERE id_produto='$cod_produto'";
+               $query="SELECT * FROM categoria";
+
+               $resultado= mysqli_query($db_connect,$query);
+               $result = $db_connect->query($sql); 
+
+                if($result->num_rows >0){
+
+                    while($row = $result->fetch_assoc()){
+                         $produto_nome= $row['nome_produto'];
+                         $produto_descr= $row['descricao'];
+                         $produto_preco= $row['preco'];
+                         $produto_img=$row['url_imagem'];
+                       }
+                     while($prod=mysqli_fetch_assoc($resultado)){
+                         $produto_categoria= $prod['nome_categoria'];
+                       }     
+                    }
+                }    
+		?>	
+
 		<div class="row">
 
 			<div class="col-sm-7 descricao-produto">
-				<h1>Titulo do Produto</h1>
+				<h1><?php echo $produto_nome;?></h1>
 			
-				<center><img src="../fotos/content_blb001_3d-box_400px.png" class="img-fluid" alt="imagem do jogo"></center>
-				<p> Descrição do produto</p>
+				<center><img src="../fotos/<?php echo $produto_img;?>" class="img-fluid" alt="imagem do jogo"></center>
+				<p><?php echo $produto_descr;?></p>
 			
 			</div>
 
 			<div class="col-sm-4 descricao-produto">
 
 				<h2><b>Categoria:</b></h2>  
-				<h3>Categoria do produto</h3>
+				<h3><?php echo $produto_categoria;?></h3>
 				 
 				<hr>
 
 				<h2><b>Valor:</b></h2>
-				<h3>R$ 0,00</h3>
+				<h3>R$ <?php echo $produto_preco;?></h3>
 					
 				</div>
 											

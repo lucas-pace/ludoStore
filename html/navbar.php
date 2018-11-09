@@ -8,12 +8,13 @@
     <link rel="stylesheet" href = "../assets/css/produtos.css">
     <link rel="stylesheet" href = "../assets/css/desgin.css">
 	<link rel="stylesheet" href = "../assets/css/yan.css">
-    <link rel="stylesheet" href="../assets/css/styles.css"> 
     <link rel="stylesheet" href="../assets/css/quem_somos_styles.css">
     <link rel="icon" type="imagem/png" href="../assets/imagem/agora-logo.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/js/scripts.js">
 	<link href="https://fonts.googleapis.com/css?family=Belleza|MedievalSharp" rel="stylesheet">
+	<link rel="stylesheet" href="../assets/css/styles.css"> 
+
 	<title class="lud">LudoStore</title>
 </head>
 
