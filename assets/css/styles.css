@@ -131,15 +131,16 @@
 	margin-left:auto;
 	margin-top: 40px;
 	margin-bottom: 50px;
-}
-
-li{
-	list-style: none;
+	text-align: center;
 }
 
 .table a{
 	text-decoration: none;
 	color:#000000;
+}
+
+.icone-tab-adm{
+	margin-right: 15px;
 }
 
 
@@ -153,28 +154,7 @@ li{
 	color:#ffffff;
 }
 
-.titulo-categoria-adm{
-	margin-top: 30px;
-	margin-left: 40px;
-}
 
-.icone-categoria-adm{
-	text-align: center;
-}
-
-.icone-categoria-adm img{
-	margin-left: 4px;
-	margin-right: 4px;
-}
-
-.icone-adicionar-categoria{
-	margin-bottom: 30px;
-	text-align: right;
-}
-
-.icone-adicionar-categoria img{
-	width: 40px;
-}
 
 /* HOME */
 
