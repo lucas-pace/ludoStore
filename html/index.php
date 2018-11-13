@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<?php include 'navbar.php';?>
+
 <?php
 $servername = "localhost";
-$username = "yan";
+$username = "root";
 $password = "root";
 $dbname = "ludoStore";
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -10,63 +11,6 @@ if ($conn->connect_error) {
 }
 
 ?>
-<html>
-
-<head>
-	<!-- Importando CSS do Bootstrap -->
-	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../assets/css/desgin.css">
-	<link rel="stylesheet" href="../assets/css/yan.css">
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../assets/js/scripts.js">
-	<title>LudoStore</title>
-</head>
-
-<body>
-	<?php
-
-include 'navbar.php';
-
-?>
-
-	<div class="modal fade" id="Login" role="dialog">
-
-		<div class="modal-dialog">
-
-			<div class="modal-content">
-
-
-				<div class="modal-body">
-					<form>
-						<div class="caixa_login">
-
-							<label class="dad lud">Login</label> <br>
-							<img src="../assets/imagem/agora-logo.png">
-							<div class="dad2 lud">
-								<label>Usuario: </label> <input type="text" title="usuario" placeholder=""><br>
-								<div class="dad3 lud"><label>Senha: </label><input type="password" title="senha" placeholder="">
-
-									<br><br></div>
-							</div>
-							<div class="modal_button">
-								<button type="button" class="btn btn-link lud" data-dismiss="modal">Voltar</button>
-								<button type="button" class="btn btn-link lud" value="entrar">Entrar</button>
-
-
-							</div>
-
-						</div>
-
-					</form>
-
-				</div>
-
-			</div>
-		</div>
-	</div>
 
 	<div class="container">
 

@@ -24,6 +24,13 @@
 	margin-top: 70px;
 	font-family: "MedievalSharp";
 	font-size: 45px;
+} 
+
+.confirmacao-contato p{
+	text-align: center;
+	color: #8B0000;
+	margin-bottom: 50px;
+	font-weight: bold;
 }
 
 /* PAGINA DO PRODUTO INDIVIDUAL*/
@@ -74,7 +81,7 @@
 .descricao-produto img{
 	margin-top: 8px;
 	margin-bottom: 20px;
-	width: 370px;
+	width: 300px;
 }
 
 /* PAGINA PRODUTO INDIVIDUAL ADM*/
@@ -124,15 +131,16 @@
 	margin-left:auto;
 	margin-top: 40px;
 	margin-bottom: 50px;
-}
-
-li{
-	list-style: none;
+	text-align: center;
 }
 
 .table a{
 	text-decoration: none;
 	color:#000000;
+}
+
+.icone-tab-adm{
+	margin-right: 15px;
 }
 
 
@@ -146,28 +154,7 @@ li{
 	color:#ffffff;
 }
 
-.titulo-categoria-adm{
-	margin-top: 30px;
-	margin-left: 40px;
-}
 
-.icone-categoria-adm{
-	text-align: center;
-}
-
-.icone-categoria-adm img{
-	margin-left: 4px;
-	margin-right: 4px;
-}
-
-.icone-adicionar-categoria{
-	margin-bottom: 30px;
-	text-align: right;
-}
-
-.icone-adicionar-categoria img{
-	width: 40px;
-}
 
 /* HOME */
 
