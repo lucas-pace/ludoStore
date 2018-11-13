@@ -1,4 +1,67 @@
+
+
 <!DOCTYPE html>
+<script>
+var categoria=0;
+ 
+function LoadProd() {
+  
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      if(this.responseText==""){
+      document.getElementById("produtos").innerHTML="";
+      document.getElementById("produtos").style.height="100px";
+    }
+      else{
+          var string= this.responseText;
+          var array=JSON.parse(string);
+          console.log(array);
+          document.getElementById("produtos").innerHTML=" ";
+          for ( produto of array){
+            console.log(produto);
+            document.getElementById("produtos").innerHTML+=" <div class= \"card filter infantil\" style=\"width: 20rem;\">"+
+                        "<img class=\"card-img-top img-200-200\" src=\" "+produto['url']+"\" alt=\"Card image cap\">"+
+                            "<div class=\"card-body\">"+
+                                "<h5 class=\"card-title lud\">"+ produto['nome'] +"</h5>"+
+                                "<p class=\"card-text\"> R$ "+parseFloat(produto['preco']).toFixed(2)+"</p>"+
+                                "<a href=\"produto-individual.html\" class=\"btn btn-default botao lud\">Mais</a>"+
+                            "</div>"+
+                    "</div>";
+              
+
+          }
+
+      }
+    }
+  };
+  texto=document.getElementById("text_busca").value;
+  xmlhttp.open("GET","query.php?cat_nome="+categoria+ "&texto="+texto,true);
+  xmlhttp.send();
+
+}
+function updateCat(cat){
+    categoria=cat;
+    LoadProd();
+}
+</script>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "ludoStore";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+	die ("Connection failed: " . $conn->connect_error);
+}
+
+?>
 <html>
 <head>
 	<!-- Importando CSS do Bootstrap -->
@@ -87,7 +150,7 @@
         <div class="col busc">
           <form class="form-search ">
             <div class="input-append busca-bloco">
-              <input type="text" name="busca" class="search-query " >
+              <input type="text" id="text_busca"name="busca" class="search-query" onKeyUp="LoadProd()">
               <button type="submit" class="btn btn-sm botao bsc lud"><h6>Buscar</h6></button>
             </div>
           </form></div>
@@ -98,18 +161,37 @@
   <div class="row"> 
     <div class="col-sm-2 menu-categ">
       <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action active lud list-group-item-light" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Todos</a>
-        <a class="list-group-item list-group-item-action lud list-group-item-light" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Quadrinhos</a>
-        <a class="list-group-item list-group-item-action lud list-group-item-light" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Tabuleiros</a>
-        <a class="list-group-item list-group-item-action lud list-group-item-light" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Cartas</a>
-        <a class="list-group-item list-group-item-action lud list-group-item-light" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Xadrez</a>
       </div>
+
+      			<?php
+$sql = "select * from categoria order by nome_categoria";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+
+	while ($row = $result->fetch_assoc()) {
+
+		echo (
+
+                "<a class=\"list-group-item list-group-item-action lud list-group-item-light\"
+                id=\"list-home-list\" data-toggle=\"list\" href onClick=\"updateCat(".$row["id_categoria"]  .")\" 
+                role=\"tab\" aria-controls=\"home\">".$row["nome_categoria"] ."</a>");
+	}
+}
+else {
+	echo "
+				<h5 style:\"text-color:red\">ERROR<h5>
+				
+				";
+}
+?>
+      
+
     </div>
-  
-  
     <div class="col-sm-9 tabela">
   
-        <div class="card-columns">
+        <div class="card-columns" id ="produtos" style="min-height:40pc">
                 <div class="card filter infantil" style="width: 20rem;">
                         <img class="card-img-top img-200-200" src="../fotos/game_of_life.jpg" alt="Card image cap">
                             <div class="card-body">

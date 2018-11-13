@@ -28,11 +28,11 @@
 			<a class="navbar-brand lud" href="index.html">LudoStore</a>
 			<div class = "collapse navbar-collapse" id= "navbarSite">
 				<ul class = "navbar-nav mr-auto">
-          <li class="nav-item lud"><a class= "nav-link" href="index.html">Home</a></li>
-          <li class="nav-item lud"><a class= "nav-link" href="produtos-todos.html">Produtos</a></li>
-					<li class="nav-item lud"><a class= "nav-link" href="quem_somos.html">Quem Somos</a></li>
-					<li class="nav-item lud"><a class= "nav-link" href="contato.html">Contato</a></li>
-					<li class="nav-item lud"><a class= "nav-link" href="localizacao.html">Local</a></li>
+          <li class="nav-item lud"><a class= "nav-link" href="index.php">Home</a></li>
+          <li class="nav-item lud"><a class= "nav-link" href="produtos.php">Produtos</a></li>
+					<li class="nav-item lud"><a class= "nav-link" href="quem_somos.php">Quem Somos</a></li>
+					<li class="nav-item lud"><a class= "nav-link" href="contato.php">Contato</a></li>
+					<li class="nav-item lud"><a class= "nav-link" href="localizacao.php">Local</a></li>
 				</ul>
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item mass lud"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#Login">Login</button></li>
