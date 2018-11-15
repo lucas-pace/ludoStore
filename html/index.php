@@ -2,7 +2,7 @@
 
 <?php
 $servername = "localhost";
-$username = "root";
+$username = "yan";
 $password = "root";
 $dbname = "ludoStore";
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -129,14 +129,11 @@ else {
 				
 				";
 }
-	
+
 
 ?>
 			
 		</div>
 		<br>
 	</div>
-<?php
-include 'footer.php';
-?>
-</body>
+<?php include 'footer.php';?> 

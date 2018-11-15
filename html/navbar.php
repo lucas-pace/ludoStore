@@ -14,9 +14,6 @@
 	<link rel="stylesheet" href="../assets/js/scripts.js">
 	<link href="https://fonts.googleapis.com/css?family=Belleza|MedievalSharp" rel="stylesheet">
 	<link rel="stylesheet" href="../assets/css/styles.css"> 
-	<script type="text/javascript">
-	 $('Login').modal('show');
-	</script>
 	<title class="lud">LudoStore</title>
 	
 </head>
