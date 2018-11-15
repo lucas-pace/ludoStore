@@ -14,11 +14,15 @@
 	<link rel="stylesheet" href="../assets/js/scripts.js">
 	<link href="https://fonts.googleapis.com/css?family=Belleza|MedievalSharp" rel="stylesheet">
 	<link rel="stylesheet" href="../assets/css/styles.css"> 
-
+	<script type="text/javascript">
+	 $('Login').modal('show');
+	</script>
 	<title class="lud">LudoStore</title>
+	
 </head>
 
 <body>
+	
   <nav class= "navbar navbar-fixed-top navbar-expand-lg navbar-default navbar-dark">
 		<a class="navbar-brand" href="index.php">
 			<img src="../assets/imagem/agora-logo.png" width="100" height="100" alt="Logo LudoStore">
@@ -42,8 +46,9 @@
 			</div>
 		</div>
 	</nav>
+	
 
-	<div class="modal fade" id="Login" role="dialog">
+	<div class="modal fade" id="Login" role="dialog" data-backdrop="static">
 
 			<div class="modal-dialog">
 
@@ -51,27 +56,36 @@
 				
 
 							<div class="modal-body">
-									<form>
+
+									
+
+										<form action="autentica_login.php" method="post">
 											<div class="caixa_login">  
 												
 												<label class="dad lud">Login</label>  <br>
 												<img src="../assets/imagem/agora-logo.png">
-												<div class="dad2 lud">
-												<label >Usuario: </label>	<input type="text" title="usuario" placeholder=""><br>    
-												<div class="dad3 lud"><label>Senha: </label><input type="password" title="senha" placeholder="">
 												
-												<br><br></div>
-												</div>
+												<div class="dad2 lud">
+												<label >Usuario: </label><input type="text" name="login" class="field"><br>    
+												<div class="dad3 lud"><label>Senha: </label></div><input type="password" name="senha" class="field passinpt"></div>
+
+												
+												<br><br>
+												
+												
 												<div class="modal_button">
 												<button type="button" class="btn btn-link lud" data-dismiss="modal">Voltar</button> 
-												<button type="button" class="btn btn-link lud" value="entrar">Entrar</button> 
+												<input type="submit" name="submit" class="btn btn-link lud entrar" value="Entrar"><br>
+
 		
 												 
 											</div> 
 																																		
 											</div>    
 							
-									</form> 
+										</form> 
+
+                                    
 		
 							</div>					
 		

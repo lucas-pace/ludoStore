@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (empty($_SESSION['login'])) {
+    return header('location: ../error.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,44 +41,10 @@
 					<li class="nav-item lud"><a class= "nav-link" href="prod-individual-ADM.php">Produto Individual</a></li>
 				</ul>
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item mass lud"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#Login">Login</button></li>
+					<li class="nav-item mass lud"><a href="logout.php?token='.md5(session_id()).'"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#Login">Logout</button></a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<div class="modal fade" id="Logout" role="dialog">
-
-			<div class="modal-dialog">
-
-					<div class="modal-content">
-				
-
-							<div class="modal-body">
-									<form>
-											<div class="caixa_login">  
-												
-												<label class="dad lud">Logout</label>  <br>
-												<img src="../../assets/imagem/agora-logo.png">
-												<div class="dad2 lud">
-												<label >Usuario: </label>	<input type="text" title="usuario" placeholder=""><br>    
-												<div class="dad3 lud"><label>Senha: </label><input type="password" title="senha" placeholder="">
-												
-												<br><br></div>
-												</div>
-												<div class="modal_button">
-												<button type="button" class="btn btn-link lud" data-dismiss="modal">Voltar</button> 
-												<button type="button" class="btn btn-link lud" value="entrar">Entrar</button> 
-		
-												 
-											</div> 
-																																		
-											</div>    
-							
-											</form> 
-		
-							</div>					
-		
-						</div>
-			</div>
-		</div>
+	
