@@ -67,18 +67,24 @@ body{
 	 
  } 
 
+
  .dad {
 	 padding-top: 15px;
 	 padding-left:140px;
 	 
 	
  }
+
 .dad2 {
 	margin-top: 30px;
+	text-align: left;
+	
+	
 }
 .dad3 {
 	display: inline-block;
-	margin-left: 15px;
+	padding-right: 13px;
+	text-align: left;
 	
 }
 .caixa_login img {
@@ -92,13 +98,17 @@ body{
 .modal_button {
 	margin-top: 10px;
 	 margin-bottom: 10px;
-	 margin-left: 100px;	
+	 margin-left: 50px;	
 }
  .modal-body button {	 
 	 text-decoration:none!important;
 	 color:rgba(255,255,255,.5);
   }
-  .modal-body button:hover,.modal-footer button :active{
+  .modal_button input {	 
+	text-decoration:none!important;
+	color:rgba(255,255,255,.5);
+ }
+  .modal-body button:hover,.modal-footer button :active,.modal_button input:hover{
 	  color:white;
 	  text-decoration:none !important;
   }
@@ -106,9 +116,11 @@ body{
   {
 	  background-color: #920000;
   }
+ 
   .lud {
 	font-family: "dragonslapper" !important;
-	text-decoration-color: aliceblue;
+	text-decoration-color: aliceblue !important;	
+	text-decoration: none;
   }
 
  .navbar-brand
