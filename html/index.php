@@ -2,8 +2,8 @@
 
 <?php
 $servername = "localhost";
-$username = "yan";
-$password = "root";
+$username = "root";
+$password = "";
 $dbname = "ludoStore";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
 
 	$row = $result->fetch_assoc();
 	echo "<div class=\"carousel-item active\">
-				      <a href=\"produto-individual.html\"><img class=\"d-block w-100\" src=\"" . $row["url_image"] . "\" alt=\"ultimos produtos lançados\"></a>
+				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row["url_imagem"] . "\" alt=\"ultimos produtos lançados\"></a>
 				    </div>";
 	while ($row = $result->fetch_assoc()) {
 
@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
 
 
 			<div class=\"carousel-item\">
-				      <a href=\"produto-individual.html\"><img class=\"d-block w-100\" src=\"" . $row["url_image"] . "\" alt=\"ultimos produtos lançados\"></a>
+				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row["url_imagem"] . "\" alt=\"ultimos produtos lançados\"></a>
 				    </div>
 		
 	");
@@ -109,8 +109,8 @@ if ($result->num_rows > 0) {
 		echo (
 
 
-		"<div style=\"background-image: url('" . $row["url_image"] . "')\" class =\"miniatura\">
-					<a href=\"produto-individual.html\">
+		"<div style=\"background-image: url('" . $row["url_imagem"] . "')\" class =\"miniatura\">
+					<a href=\"produto-individual.php?produto=".$row['id_produto'] ."\">
 				<div class= \"blackbox\">	
 					<div class=\"blackbox-text\">
 						<h1><b>\" " . $row["nome_produto"] . " \"</b></h1>
