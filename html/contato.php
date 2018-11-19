@@ -1,4 +1,7 @@
-<?php include 'navbar.php';?>                   
+<?php include 'navbar.php';
+      include 'confirmacao.php';
+      $confirmacao='1';
+?>                   
 
 
   <div class="container">
@@ -46,122 +49,116 @@
                 <textarea class="form-control field" name="mensagem"  rows="3" placeholder="__φ(．．) " required></textarea>
               </div>
 
-              <div class="contato-botao-enviar">
-                <button class="btn btn-outline-danger contato-botao" type="submit" name="submit" value="enviar">enviar</button>
-              </div>
-              <br>  
-        </form>
+              
                             
-          <?php 
+            <?php 
 
 
-                // Inserir Arquivos do PHPMailer
-                require '../assets/phpmailer/Exception.php';
-                require '../assets/phpmailer/PHPMailer.php';
-                require '../assets/phpmailer/SMTP.php';
+                  // Inserir Arquivos do PHPMailer
+                  require '../assets/phpmailer/Exception.php';
+                  require '../assets/phpmailer/PHPMailer.php';
+                  require '../assets/phpmailer/SMTP.php';
 
-                // Usar as classes sem o namespace
-                use PHPMailer\PHPMailer\PHPMailer;
-                use PHPMailer\PHPMailer\Exception;
-
-
-                function clean_input($input){
-                    $input = trim($input);
-                    $input = stripslashes($input);
-                    $input = htmlspecialchars($input);
-
-                    return $input;
-                }
-
-                if($_SERVER['REQUEST_METHOD']== 'POST'){
-                    $nome=$_POST['nome'];
-                    $email=$_POST['email'];
-                    $mensagem=$_POST['mensagem'];
-                    $assunto=$_POST['assunto'];
-
-                    $nome= clean_input($nome);
-                    $email= clean_input($email);
-                    $mensagem= clean_input($mensagem);
-                    $texto_msg = 'E-mail enviado através da pagina de contato do site'
-                    . '<br><br>' . 
-                    'Nome: ' . $nome . '<br>' .
-                    'E-mail: ' . $email . '<br>' .
-                    'Mensagem: ' . $mensagem . '<br>' ;
+                  // Usar as classes sem o namespace
+                  use PHPMailer\PHPMailer\PHPMailer;
+                  use PHPMailer\PHPMailer\Exception;
 
 
-                    // Criação do Objeto da Classe PHPMailer
-                    $mail = new PHPMailer(true); 
-                    $mail->CharSet="UTF-8";
+                  function clean_input($input){
+                      $input = trim($input);
+                      $input = stripslashes($input);
+                      $input = htmlspecialchars($input);
+
+                      return $input;
+                  }
+
+                  if($_SERVER['REQUEST_METHOD']== 'POST'){
+                      $nome=$_POST['nome'];
+                      $email=$_POST['email'];
+                      $mensagem=$_POST['mensagem'];
+                      $assunto=$_POST['assunto'];
+
+                      $nome= clean_input($nome);
+                      $email= clean_input($email);
+                      $mensagem= clean_input($mensagem);
+                      $texto_msg = 'E-mail enviado através da pagina de contato do site'
+                      . '<br><br>' . 
+                      'Nome: ' . $nome . '<br>' .
+                      'E-mail: ' . $email . '<br>' .
+                      'Mensagem: ' . $mensagem . '<br>' ;
 
 
-                    try {       
-                        //$mail->SMTPDebug = 2;                                                       
-                        
-                        // Usar SMTP para o envio
-                        $mail->isSMTP();                                      
+                      // Criação do Objeto da Classe PHPMailer
+                      $mail = new PHPMailer(true); 
+                      $mail->CharSet="UTF-8";
 
-                        // Detalhes do servidor (No nosso exemplo é o Google)
-                        $mail->Host = 'smtp.gmail.com';
 
-                        // Permitir autenticação SMTP
-                        $mail->SMTPAuth = true;                               
+                      try {       
+                          //$mail->SMTPDebug = 2;                                                       
+                          
+                          // Usar SMTP para o envio
+                          $mail->isSMTP();                                      
 
-                        // Nome do usuário
-                        $mail->Username = 'ludostore42@gmail.com';        
-                        // Senha do E-mail         
-                        $mail->Password = 'amelhorloja';                           
-                        // Tipo de protocolo de segurança
-                        $mail->SMTPSecure = 'tls';   
+                          // Detalhes do servidor (No nosso exemplo é o Google)
+                          $mail->Host = 'smtp.gmail.com';
 
-                        // Porta de conexão com o servidor                        
-                        $mail->Port = 587;
+                          // Permitir autenticação SMTP
+                          $mail->SMTPAuth = true;                               
 
-                        
-                        // Garantir a autenticação com o Google
-                        $mail->SMTPOptions = array(
-                            'ssl' => array(
-                                'verify_peer' => false,
-                                'verify_peer_name' => false,
-                                'allow_self_signed' => true
-                            )
-                        );
+                          // Nome do usuário
+                          $mail->Username = 'ludostore42@gmail.com';        
+                          // Senha do E-mail         
+                          $mail->Password = 'amelhorloja';                           
+                          // Tipo de protocolo de segurança
+                          $mail->SMTPSecure = 'tls';   
 
-                        // Remetente
-                        $mail->setFrom($email, $nome);
-                        
-                        // Destinatário
-                        $mail->addAddress('ludostore42@gmail.com', 'LudoStore');
+                          // Porta de conexão com o servidor                        
+                          $mail->Port = 587;
 
-                        // Conteúdo
+                          
+                          // Garantir a autenticação com o Google
+                          $mail->SMTPOptions = array(
+                              'ssl' => array(
+                                  'verify_peer' => false,
+                                  'verify_peer_name' => false,
+                                  'allow_self_signed' => true
+                              )
+                          );
 
-                        // Define conteúdo como HTML
-                        $mail->isHTML(true);                                  
+                          // Remetente
+                          $mail->setFrom($email, $nome);
+                          
+                          // Destinatário
+                          $mail->addAddress('ludostore42@gmail.com', 'LudoStore');
 
-                        // Assunto
-                        $mail->Subject = $assunto;
-                        $mail->Body    = $texto_msg;
-                        $mail->AltBody = $texto_msg;
+                          // Conteúdo
 
-                        // Enviar E-mail
-                        $mail->send();
-                        $confirmacao = '☆*:.｡. Mensagem enviada com sucesso  ☆*:.｡.o(≧▽≦)o.｡.:*☆';
-                    } catch (Exception $e) {
-                        $confirmacao = 'A mensagem não foi enviada ･ﾟﾟ･(／ω＼)･ﾟﾟ･.';
-                    }
-                                           
-                } 
+                          // Define conteúdo como HTML
+                          $mail->isHTML(true);                                  
 
-          ?>
+                          // Assunto
+                          $mail->Subject = $assunto;
+                          $mail->Body    = $texto_msg;
+                          $mail->AltBody = $texto_msg;
 
-        <?php if($_SERVER['REQUEST_METHOD']== 'POST'){ ?>
-          <div class="confirmacao-contato">
-           <p><?php echo $confirmacao; ?></p>
-          </div> 
-        <?php }; ?>
+                          // Enviar E-mail
+                          $mail->send();
+                          $confirmacao = '1';
+                      } catch (Exception $e) {
+                          $confirmacao = '0';
+                      }
+                                             
+                  } 
+
+            ?>
+            <div class="contato-botao-enviar">
+              <button class="btn btn-outline-danger contato-botao" type="submit" name="submit" value="enviar" onclick=confirm('<?php echo $confirmacao ;?>')>enviar</button>
+            </div>
+            <br>  
+          </form>
 
       </div>
     </div> 
 </div> 
-
 
 <?php include 'footer.php';?> 
