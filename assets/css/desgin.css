@@ -111,6 +111,11 @@ body{
 	text-decoration-color: aliceblue;
   }
 
+  .isso
+  {
+	font-family: "dragonslapper" !important;
+	color: #920000!important;
+  }
  .navbar-brand
   {
 	  color: #fff;
