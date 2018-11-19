@@ -1,17 +1,5 @@
-
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ludoStore";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-	die ("Connection failed: " . $conn->connect_error);
-}
-include 'navbar-ADM.php' ;
-?>
-  <html>
- <body><div class="container">
+<?php include 'navbar-ADM.php';?> 
+  <div class="container">
 
     <div class="row titulo-categoria-adm">
       <h1>Categorias</h1>
@@ -25,35 +13,60 @@ include 'navbar-ADM.php' ;
       </thead>
 
       <tbody>
-          
-      <?php
-              $sql = "select * from categoria";
-              $result = $conn->query($sql);                  
-                  while ($row=$result->fetch_assoc()) {
-                    echo "
-                    <tr>
-                    <td><a href=\"tabelacategoriaindividual.php\">Tabuleiros</a></td>
-                    <td>
-                      <div class=\"icone-categoria-adm\" >
-                        <li>
-                         <a href= \"tabelacategoriaindividual.php?id=".$row['id_categoria']."\" target=\"_blanck\"><img src=\"../../img/icone-lapis.png\" class=\"img-fluid\">
-                         <a href= \"botao-delete-categoria.php?id=".$row['id_categoria']."\" target=\"_blanck\"><img src=\"../../img/icone-lixeira.png\" class=\"img-fluid\">
-                        </li> 
-                      </div> 
-                    </td>
-                  </tr>
-                      
-                    
-                    ";
-                  }        
-        ?>
 
-        
+        <tr>
+          <td><a href="tabelacategoriaindividual.php">Tabuleiros</a></td>
+          <td>
+            <div class="icone-categoria-adm" >
+              <li>
+               <a href= "#" target="_blanck"><img src="../../img/icone-lapis.png" class="img-fluid">
+               <a href= "#" target="_blanck"><img src="../../img/icone-lixeira.png" class="img-fluid">
+              </li> 
+            </div> 
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="tabelacategoriaindividual.php">Cartas</a></td>
+           <td>
+            <div class="icone-categoria-adm">
+               <li>
+               <a href= "#" target="_blanck"><img src="../../img/icone-lapis.png" class="img-fluid">
+               <a href= "#" target="_blanck"><img src="../../img/icone-lixeira.png" class="img-fluid">
+              </li> 
+            </div> 
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="tabelacategoriaindividual.php">Leitura</a></td>
+           <td>
+            <div class="icone-categoria-adm">
+               <li>
+               <a href= "#" target="_blanck"><img src="../../img/icone-lapis.png" class="img-fluid">
+               <a href= "#" target="_blanck"><img src="../../img/icone-lixeira.png" class="img-fluid">
+              </li> 
+            </div> 
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="tabelacategoriaindividual.php">Xadrez</a></td>
+           <td>
+            <div class="icone-categoria-adm">
+               <li>
+               <a href= "#" target="_blanck"><img src="../../img/icone-lapis.png" class="img-fluid">
+               <a href= "#" target="_blanck"><img src="../../img/icone-lixeira.png" class="img-fluid">
+              </li> 
+            </div> 
+          </td>
+        </tr>
+
       </tbody>
     </table>
 
     <div class="icone-adicionar-categoria">
-      <a href= "tabelacategoriaindividual.php?id=0" target="_blanck"><img src="../../img/icone-mais.png" class="img-fluid" title="Adicionar Nova Categoria">
+      <a href= "#" target="_blanck"><img src="../../img/icone-mais.png" class="img-fluid" title="Adicionar Nova Categoria">
     </div>
 
   </div>
@@ -65,5 +78,3 @@ include 'navbar-ADM.php' ;
   ?>
 
 <?php include 'footer-ADM.php';?>  
-</body>
-<html>
