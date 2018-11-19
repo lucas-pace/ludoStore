@@ -43,7 +43,7 @@
 			<div class="col-sm-7 descricao-produto">
 				<h1><?php echo $produto_nome;?></h1>
 			
-				<center><img src="../fotos/<?php echo $produto_img;?>" class="img-fluid" alt="imagem do jogo"></center>
+				<center><img src="<?php echo $produto_img;?>" class="img-fluid" alt="imagem do jogo"></center>
 				<p><?php echo $produto_descr;?></p>
 			
 			</div>
