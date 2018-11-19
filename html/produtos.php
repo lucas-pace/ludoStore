@@ -1,4 +1,60 @@
 <!DOCTYPE html>
+<script>
+var categoria=0;
+ 
+function LoadProd() {
+  
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      if(this.responseText==""){
+      document.getElementById("produtos").innerHTML="";
+      document.getElementById("produtos").style.height="100px";
+    }
+      else{
+          var string= this.responseText;
+          var array=JSON.parse(string);
+          console.log(array);
+          document.getElementById("produtos").innerHTML=" ";
+          for ( produto of array){
+            console.log(produto);
+            document.getElementById("produtos").innerHTML+=" <div class= \"card filter infantil\" style=\"width: 20rem;\">"+
+                        "<img class=\"card-img-top img-200-200\" src=\" "+produto['url']+"\" alt=\"Card image cap\">"+
+                            "<div class=\"card-body\">"+
+                                "<h5 class=\"card-title lud\">"+ produto['nome'] +"</h5>"+
+                                "<p class=\"card-text\"> R$ "+parseFloat(produto['preco']).toFixed(2)+"</p>"+
+                                "<a href=\"produto-individual.html\" class=\"btn btn-default botao lud\">Mais</a>"+
+                            "</div>"+
+                    "</div>";
+              
+          }
+      }
+    }
+  };
+  texto=document.getElementById("text_busca").value;
+  xmlhttp.open("GET","query.php?cat_nome="+categoria+ "&texto="+texto,true);
+  xmlhttp.send();
+}
+function updateCat(cat){
+    categoria=cat;
+    LoadProd();
+}
+</script>
+<?php
+$servername = "localhost";
+$username ="root";
+$password = "";
+$dbname = "ludoStore";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+	die ("Connection failed: " . $conn->connect_error);
+}
+?>
 <html>
 <head>
 	<!-- Importando CSS do Bootstrap -->
@@ -15,71 +71,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Belleza|MedievalSharp" rel="stylesheet">
 	<title class="lud">LudoStore</title>
 </head>
-
 <body>
-  <nav class= "navbar navbar-fixed-top navbar-expand-lg navbar-default navbar-dark">
-		<a class="navbar-brand" href="index.html">
-			<img src="../assets/imagem/agora-logo.png" width="100" height="100" alt="Logo LudoStore">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite" aria-controls="navbarSite" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class ="container">
-			<a class="navbar-brand lud" href="index.html">LudoStore</a>
-			<div class = "collapse navbar-collapse" id= "navbarSite">
-				<ul class = "navbar-nav mr-auto">
-          <li class="nav-item lud"><a class= "nav-link" href="index.html">Home</a></li>
-          <li class="nav-item lud"><a class= "nav-link" href="produtos-todos.html">Produtos</a></li>
-					<li class="nav-item lud"><a class= "nav-link" href="quem_somos.html">Quem Somos</a></li>
-					<li class="nav-item lud"><a class= "nav-link" href="contato.html">Contato</a></li>
-					<li class="nav-item lud"><a class= "nav-link" href="localizacao.html">Local</a></li>
-				</ul>
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item mass lud"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#Login">Login</button></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<div class="modal fade" id="Login" role="dialog">
-
-			<div class="modal-dialog">
-
-					<div class="modal-content">
-				
-
-							<div class="modal-body">
-									<form>
-											<div class="caixa_login">  
-												
-												<label class="dad lud">Login</label>  <br>
-												<img src="../assets/imagem/agora-logo.png">
-												<div class="dad2 lud">
-												<label >Usuario: </label>	<input type="text" title="usuario" placeholder=""><br>    
-												<div class="dad3 lud"><label>Senha: </label><input type="password" title="senha" placeholder="">
-												
-												<br><br></div>
-												</div>
-												<div class="modal_button">
-												<button type="button" class="btn btn-link lud" data-dismiss="modal">Voltar</button> 
-												<button type="button" class="btn btn-link lud" value="entrar">Entrar</button> 
-		
-												 
-											</div> 
-																																		
-											</div>    
-							
-									</form> 
-		
-							</div>					
-		
-						</div>
-			</div>
-		</div>
-  <br>
-  <div class="galeria">
-    <h1 class="titulo">Todos os Produtos</h1>
-  </div>
+  
+<body>
+<?php 
+  include 'navbar.php'?>
   <div class="container">
     <div class="row" >     
       
@@ -87,7 +83,7 @@
         <div class="col busc">
           <form class="form-search ">
             <div class="input-append busca-bloco">
-              <input type="text" name="busca" class="search-query " >
+              <input type="text" id="text_busca"name="busca" class="search-query" onKeyUp="LoadProd()">
               <button type="submit" class="btn btn-sm botao bsc lud"><h6>Buscar</h6></button>
             </div>
           </form></div>
@@ -98,10 +94,27 @@
   <div class="row"> 
     <div class="col-sm-2 menu-categ">
       <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action active lud list-group-item-light" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Todos</a>
-        <a class="list-group-item list-group-item-action lud list-group-item-light" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Quadrinhos</a>
-        <a class="list-group-item list-group-item-action lud list-group-item-light" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Tabuleiros</a>
-        <a class="list-group-item list-group-item-action lud list-group-item-light" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Cartas</a>
+
+      <?php
+$sql = "select * from categoria ";
+$result = $conn->query($sql);
+
+
+echo "<a class=\"list-group-item list-group-item-action active lud list-group-item-light\"
+id=\"list-home-list\" data-toggle=\"list\" onClick=\"updateCat(0)\" 
+role=\"tab\" aria-controls=\"home\"> Todos </a>
+   ";
+
+	
+	while ($row = $result->fetch_assoc()) {
+
+    echo "<a class=\"list-group-item list-group-item-action lud list-group-item-light\"
+     id=\"list-home-list\" data-toggle=\"list\" onClick=\"updateCat(".$row['id_categoria'].")\" 
+     role=\"tab\" aria-controls=\"home\">".$row['nome_categoria']."</a>
+        ";}
+
+
+      ?>
         <a class="list-group-item list-group-item-action lud list-group-item-light" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Xadrez</a>
       </div>
     </div>
@@ -109,6 +122,7 @@
   
     <div class="col-sm-9 tabela">
   
+<<<<<<< HEAD
         <div class="card-columns">
                 <div class="card filter infantil cartao">
                         <img class="card-img-top img-200-200" src="../fotos/game_of_life.jpg" alt="Card image cap">
@@ -302,83 +316,16 @@
               <a href="produto-individual.html" class="btn btn-default botao lud">Mais</a>
           </div>
   </div>
+=======
+        <div class="card-columns" id ="produtos">
+                
+>>>>>>> master
         </div>
                       
         </div>
 </div>
-<footer class="page-footer"> 
- 
- <div class ="row">
- <div class ="col-md-2">
- </div>
- <div class ="col-md-5">
-  <div class="infoLojaWraperFooter">
-  <div class="list-unstyled">
-  <li>
-  <div class="infoLojaFooter">
-    <p> Endereço: xxxxxx xxxxxxxxx xxxxxxxxxxx</p>
-  </div>
-  </li>
-  <li>
-  <div class="infoLojaFooter">
-    <p> Email: xxxxxxxxxxxxxxxxx@xxxx.xxx</p>
-  </div>
-  </li>
-  <li>
-  <div class="infoLojaFooter">
-    <p> Telefone: (xx)xxxxx-xxxxx</p>
-  </div>
-  </li>
-  <li><div class = "iconeMidiaSocialFooterWarper">
-      <div class= "iconeMidiaSocialFooterWraperIndividual">
-      <a href="#" class="fa fa-facebook iconeMidiaSocialFooter"></a>
-      </div>
-      <div class= "iconeMidiaSocialFooterWraperIndividual">
-      <a href="#" class="fa fa-instagram iconeMidiaSocialFooter"></a>
-      </div>
-      <div class= "iconeMidiaSocialFooterWraperIndividual">
-      <a href="#" class="fa fa-twitter iconeMidiaSocialFooter"></a>
-      </div>
-      <div class= "iconeMidiaSocialFooterWraperIndividual">
-      <a href="#" class="fa fa-google-plus-square iconeMidiaSocialFooter"></a>
-      </div>
-      </div>
-
-  </li>    
-  
-  </div>
-  
-  </div>
-  </div>
-  <div class="col-md-1">
-  <div class="map-wraper">
-  <div id="map">
-  <script>
-  
-  function initMap() {
-    var uluru = {lat: 40.7143528, lng: -74.0059731};
-    var map = new google.maps.Map(
-    document.getElementById('map'), {zoom: 4, center: uluru});
-    var marker = new google.maps.Marker({position: uluru, map: map});
-  }
-</script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD634e8vHGhmv9HxtQb94zFcBCs8C1TTd8&callback=initMap">
-    </script>
-    </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-</div>
- 
- <div class= "footer-copyright ">
-  
- </div>
- 
- </footer>
-
-
-
+<?php 
+  include 'footer.php'?>
 </body>
 
 <!-- Importando Javascript do Bootstrap -->

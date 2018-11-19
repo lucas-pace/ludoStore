@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<?php include 'navbar.php';?>
+
 <?php
 $servername = "localhost";
-$username = "yan";
-$password = "root";
+$username = "root";
+$password = "";
 $dbname = "ludoStore";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -10,63 +11,6 @@ if ($conn->connect_error) {
 }
 
 ?>
-<html>
-
-<head>
-	<!-- Importando CSS do Bootstrap -->
-	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../assets/css/desgin.css">
-	<link rel="stylesheet" href="../assets/css/yan.css">
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../assets/js/scripts.js">
-	<title>LudoStore</title>
-</head>
-
-<body>
-	<?php
-
-include 'navbar.php';
-
-?>
-
-	<div class="modal fade" id="Login" role="dialog">
-
-		<div class="modal-dialog">
-
-			<div class="modal-content">
-
-
-				<div class="modal-body">
-					<form>
-						<div class="caixa_login">
-
-							<label class="dad lud">Login</label> <br>
-							<img src="../assets/imagem/agora-logo.png">
-							<div class="dad2 lud">
-								<label>Usuario: </label> <input type="text" title="usuario" placeholder=""><br>
-								<div class="dad3 lud"><label>Senha: </label><input type="password" title="senha" placeholder="">
-
-									<br><br></div>
-							</div>
-							<div class="modal_button">
-								<button type="button" class="btn btn-link lud" data-dismiss="modal">Voltar</button>
-								<button type="button" class="btn btn-link lud" value="entrar">Entrar</button>
-
-
-							</div>
-
-						</div>
-
-					</form>
-
-				</div>
-
-			</div>
-		</div>
-	</div>
 
 	<div class="container">
 
@@ -88,7 +32,7 @@ if ($result->num_rows > 0) {
 
 	$row = $result->fetch_assoc();
 	echo "<div class=\"carousel-item active\">
-				      <a href=\"produto-individual.html\"><img class=\"d-block w-100\" src=\"" . $row["url_image"] . "\" alt=\"ultimos produtos lançados\"></a>
+				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row["url_imagem"] . "\" alt=\"ultimos produtos lançados\"></a>
 				    </div>";
 	while ($row = $result->fetch_assoc()) {
 
@@ -96,7 +40,7 @@ if ($result->num_rows > 0) {
 
 
 			<div class=\"carousel-item\">
-				      <a href=\"produto-individual.html\"><img class=\"d-block w-100\" src=\"" . $row["url_image"] . "\" alt=\"ultimos produtos lançados\"></a>
+				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row["url_imagem"] . "\" alt=\"ultimos produtos lançados\"></a>
 				    </div>
 		
 	");
@@ -165,8 +109,8 @@ if ($result->num_rows > 0) {
 		echo (
 
 
-		"<div style=\"background-image: url('" . $row["url_image"] . "')\" class =\"miniatura\">
-					<a href=\"produto-individual.html\">
+		"<div style=\"background-image: url('" . $row["url_imagem"] . "')\" class =\"miniatura\">
+					<a href=\"produto-individual.php?produto=".$row['id_produto'] ."\">
 				<div class= \"blackbox\">	
 					<div class=\"blackbox-text\">
 						<h1><b>\" " . $row["nome_produto"] . " \"</b></h1>
@@ -192,3 +136,4 @@ else {
 		</div>
 		<br>
 	</div>
+<?php include 'footer.php';?> 
