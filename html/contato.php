@@ -1,6 +1,5 @@
 <?php include 'navbar.php';
       include 'confirmacao.php';
-      $confirmacao='1';
 ?>                   
 
 
@@ -49,7 +48,11 @@
                 <textarea class="form-control field" name="mensagem"  rows="3" placeholder="__φ(．．) " required></textarea>
               </div>
 
-              
+            <div class="contato-botao-enviar">
+              <button class="btn btn-outline-danger contato-botao" type="submit" name="submit" value="enviar" >enviar</button>
+            </div>
+            <br>  
+          </form>           
                             
             <?php 
 
@@ -143,21 +146,23 @@
 
                           // Enviar E-mail
                           $mail->send();
-                          $confirmacao = '1';
+                          $confirmacao = '☆*:.｡. Mensagem enviada com sucesso  ☆*:.｡.o(≧▽≦)o.｡.:*☆';
                       } catch (Exception $e) {
-                          $confirmacao = '0';
+                          $confirmacao = 'mensagem não enviada .･ﾟﾟ･(／ω＼)･ﾟﾟ･.';
                       }
                                              
                   } 
 
             ?>
-            <div class="contato-botao-enviar">
-              <button class="btn btn-outline-danger contato-botao" type="submit" name="submit" value="enviar" onclick=confirm('<?php echo $confirmacao ;?>')>enviar</button>
-            </div>
-            <br>  
-          </form>
+            
 
       </div>
+
+      <?php if($_SERVER['REQUEST_METHOD']== 'POST'){ 
+
+              print"<script>alert('$confirmacao')</script>";
+      };?>
+
     </div> 
 </div> 
 
