@@ -19,7 +19,7 @@
 
      if(mysqli_num_rows($result) > 0 ){   
            $_SESSION['msg'] = "<p style='color:red;'>Usuário já existente!</p>";
-           header("Location: adiciona-usuario.php");
+           header("Location: edita-usuario.php?usuario=$id_usuario");
 	}		
 
 	else { 
