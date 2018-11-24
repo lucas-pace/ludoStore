@@ -93,9 +93,9 @@
 }
 
 .descricao-produto img{
-	margin-top: 8px;
-	margin-bottom: 20px;
-	width: 300px;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	width: 400px;
 }
 
 /* PAGINA PRODUTO INDIVIDUAL ADM*/
@@ -191,6 +191,7 @@
 	margin-top: 50px;
 	margin-bottom: 30px;
 	width: 400px;
+
 }
 
 .slide-index{
@@ -208,7 +209,6 @@
 	background-repeat: no-repeat;
 	text-align: center;
 }	
-
 .miniatura a{
 	text-decoration: none;
 }

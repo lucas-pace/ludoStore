@@ -18,10 +18,7 @@
             } else { 
 
                $sql="SELECT * FROM produto WHERE id_produto='$cod_produto'";
-               $query="SELECT * FROM categoria";
-
-               $resultado= mysqli_query($db_connect,$query);
-               $result = $db_connect->query($sql); 
+               $result = $db_connect->query($sql);  
 
                 if($result->num_rows >0){
 
@@ -29,10 +26,17 @@
                          $produto_nome= $row['nome_produto'];
                          $produto_descr= $row['descricao'];
                          $produto_preco= $row['preco'];
+                         $produto_id_categoria= $row['id_categoria'];
                          $produto_img=$row['url_imagem'];
-                       }
+                       }}
+
+                 $query="SELECT * FROM categoria WHERE id_categoria= '$produto_id_categoria'" ;   
+                 $resultado= mysqli_query($db_connect,$query);
+                 
+
+                    if($result->num_rows >0){
                      while($prod=mysqli_fetch_assoc($resultado)){
-                         $produto_categoria= $prod['nome_categoria'];
+                          $produto_categoria= $prod['nome_categoria'];
                        }     
                     }
                 }    
