@@ -296,14 +296,8 @@
 </body>
 
 <!-- Importando Javascript do Bootstrap -->
-<<<<<<< HEAD
-<script src="../../assets/js/popper.min.js"></script>
-<script src="../../assets/js/jQuery-3.2.1.slim.min.js"></script>
-<script src="../../assets/js/bootstrap.min.js"></script>
-=======
 <script src="../assets/js/popper.min.js"></script>
 <script src="../assets/js/jQuery-3.2.1.slim.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
->>>>>>> 48d22ec241e60066f4b11418d5c6a6d9d28e3f60
 
 </html>

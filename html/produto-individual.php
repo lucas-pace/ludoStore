@@ -1,6 +1,6 @@
 <?php include 'navbar.php';?> 
 		
-	<div class="container">
+	<div class="container" style="min-height:700px">
 		<?php 
 			$cod_produto= $_GET['produto'];
 
@@ -9,7 +9,7 @@
             $password = '';
             $db_name = 'ludostore';
             $port = '3306';
-
+            $produto_img;
             $db_connect = new mysqli($server,$user,$password,$db_name,$port);
             mysqli_set_charset($db_connect,"utf8");
 

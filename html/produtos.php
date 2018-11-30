@@ -28,7 +28,7 @@ function LoadProd() {
                             "<div class=\"card-body\">"+
                                 "<h5 class=\"card-title lud\">"+ produto['nome'] +"</h5>"+
                                 "<p class=\"card-text\"> R$ "+parseFloat(produto['preco']).toFixed(2)+"</p>"+
-                                "<a href=\"produto-individual.html\" class=\"btn btn-default botao lud\">Mais</a>"+
+                                "<a href=\"produto-individual.php?produto="+ produto['id']+ "\" class=\"btn btn-default botao lud\">Mais</a>"+
                             "</div>"+
                     "</div>";
               
@@ -44,6 +44,7 @@ function updateCat(cat){
     categoria=cat;
     LoadProd();
 }
+LoadProd();
 </script>
 <?php
 $servername = "localhost";
@@ -71,15 +72,24 @@ if ($conn->connect_error) {
 	<link href="https://fonts.googleapis.com/css?family=Belleza|MedievalSharp" rel="stylesheet">
 	<title class="lud">LudoStore</title>
 </head>
-<body>
+<body onLoad="LoadProd()">
   
-<body>
 <?php 
   include 'navbar.php'?>
   <div class="container">
+  <div class=row>
+  <div class="produtos-destaques" style ="margin-right: auto;
+    margin-left: auto;">
+  <br>
+  <br>
+				<h1>produtos </h1>
+			</div>
+  </div>
     <div class="row" >     
       
-
+  <script>
+  loadProd();
+  </script>
         <div class="col busc">
           <form class="form-search ">
             <div class="input-append busca-bloco">
@@ -100,32 +110,30 @@ $sql = "select * from categoria ";
 $result = $conn->query($sql);
 
 
-echo "<a class=\"list-group-item list-group-item-action active lud list-group-item-light\"
-id=\"list-home-list\" data-toggle=\"list\" onClick=\"updateCat(0)\" 
+echo "<a class=\"list-group-item list-group-item-action active lud list-group-item-light \"
+id=\"list-home-list\" data-toggle=\"list\" onClick=\"updateCat(0)\"  style=\"color:white;\"
 role=\"tab\" aria-controls=\"home\"> Todos </a>
    ";
 
 	
 	while ($row = $result->fetch_assoc()) {
 
-    echo "<a class=\"list-group-item list-group-item-action lud list-group-item-light\"
+    echo "<a class=\"list-group-item list-group-item-action lud list-group-item-light\"  style=\"color:white;\"
      id=\"list-home-list\" data-toggle=\"list\" onClick=\"updateCat(".$row['id_categoria'].")\" 
      role=\"tab\" aria-controls=\"home\">".$row['nome_categoria']."</a>
         ";}
 
 
       ?>
-        <a class="list-group-item list-group-item-action lud list-group-item-light" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Xadrez</a>
-      </div>
+        </div>
     </div>
   
   
     <div class="col-sm-9 tabela">
   
-        <div class="card-columns" id ="produtos">
-                
-        </div>
-                      
+        
+            <div class="card-columns" id="produtos" style="min-height:40pc">
+            </div>
         </div>
 </div>
 <?php 
