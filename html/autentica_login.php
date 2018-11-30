@@ -1,11 +1,13 @@
 <?php 
 
-$host = "localhost";
-$user = "yan";
-$pass = "root";
-$banco = "ludostore";
-$conexao = mysql_connect($host,$user,$pass) or die(mysql_error());
-mysql_select_db($banco) or die(mysql_error());
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ludoStore";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+	die ("Connection failed: " . $conn->connect_error);
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,8 +29,8 @@ mysql_select_db($banco) or die(mysql_error());
 <?php
 $login = $_POST['login'];
 $senha = $_POST['senha'];
-$sql = mysql_query("SELECT * FROM usuario WHERE LOGIN = '$login' and SENHA = '$senha' ") or die(mysql_error());
-$row = mysql_num_rows($sql);
+$sql = mysqli_query("SELECT * FROM usuario WHERE login = '$login' and senha = '$senha' ") or die(mysql_error());
+$row = mysqli_num_rows($sql);
 
     if ( $row > 0 ) {
 
