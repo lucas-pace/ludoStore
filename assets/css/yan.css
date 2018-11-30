@@ -1,4 +1,10 @@
-
+.tab{
+  color:grey !important;
+  }
+  .tab.active{
+  color: white !important;
+  }
+    
   .page-footer {
     
     align-self: bottom;
@@ -136,7 +142,7 @@
   margin-top: 5.3pc;
 margin-left: -10pc;
 }
-  
+
 .iconeAddProductTable{
 
   margin-top: 2px;

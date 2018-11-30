@@ -43,6 +43,23 @@ function LoadProd() {
 function updateCat(cat){
     categoria=cat;
     LoadProd();
+$('.section').hide().filter('#section1').show()
+ 
+ $(function(){
+  
+ 
+ $('tab').click(function(){ 
+  
+ 
+ $('.tab').removeClass('active').filter($(this)).addClass('active');
+  
+
+ $('.section').hide().filter(this.hash).show();
+  
+ })
+  
+ });
+ 
 }
 LoadProd();
 </script>
@@ -110,15 +127,15 @@ $sql = "select * from categoria ";
 $result = $conn->query($sql);
 
 
-echo "<a class=\"list-group-item list-group-item-action active lud list-group-item-light \"
-id=\"list-home-list\" data-toggle=\"list\" onClick=\"updateCat(0)\"  style=\"color:white;\"
+echo "<a class=\"tab list-group-item list-group-item-action active lud list-group-item-light  active \"
+id=\"list-home-list\" data-toggle=\"list\" onClick=\"updateCat(0)\"  
 role=\"tab\" aria-controls=\"home\"> Todos </a>
    ";
 
 	
 	while ($row = $result->fetch_assoc()) {
 
-    echo "<a class=\"list-group-item list-group-item-action lud list-group-item-light\"  style=\"color:white;\"
+    echo "<a class=\" tab list-group-item list-group-item-action lud list-group-item-light \"  
      id=\"list-home-list\" data-toggle=\"list\" onClick=\"updateCat(".$row['id_categoria'].")\" 
      role=\"tab\" aria-controls=\"home\">".$row['nome_categoria']."</a>
         ";}
