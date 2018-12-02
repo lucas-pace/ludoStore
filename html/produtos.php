@@ -1,7 +1,88 @@
 <!DOCTYPE html>
 <script>
+
+
 var categoria=0;
- 
+var array;
+var numitens=9;
+var pagina=1;
+var currentTreadId;
+var k="";
+var b=""
+
+function setPage(i){
+  pagina=i;
+  ShowProd();
+}
+function ShowProd(){
+k="";
+b="";
+$('#produtos').html('<div class=\"loader\"></div>');
+$('#botoes').html('');
+
+ if (!Array.isArray(array) || !array.length) {
+  k+=('<tr><td>Produto nao encontrado<td><tr>'); 
+}else
+  {
+  
+   var cont = array.length;
+	if(cont<=numitens){ //Verificando se há mais de uma página
+	
+    for(var i=0;i<=array.length-1;i++){
+      produto=array[i];
+      k  +=(' <div class= \"card filter infantil\" style=\"width: 20rem;\">'+
+                        '<img class=\"card-img-top img-200-200\" src=\" '+produto['url']+'\" alt=\"Card image cap\">'+
+                            '<div class=\"card-body\">'+
+                                '<h5 class=\"card-title lud\">'+ produto['nome'] +'</h5>'+
+                                '<p class=\"card-text\"> R$ '+parseFloat(produto['preco']).toFixed(2)+'</p>'+
+                                '<a href=\"produto-individual.php?produto='+ produto['id']+ '\" class=\"btn btn-default botao lud\">Mais</a>'+
+                            '</div>'+
+                    '</div>');
+  
+	}}else{
+		
+		
+    
+		var qtdpaginas=Math.ceil(cont/numitens); //arredondando divisão fracionada para cima
+		for(var i=0;i<=numitens-1;i++){
+      var ind=i + numitens*(pagina-1);
+      if(ind<array.length){
+      
+      produto=array[ind];
+      console.log(array.length+'--'+ind+'\n');
+      k+=('<div class= \"card filter infantil\" style=\"width: 20rem;\">'+
+                        '<img class=\"card-img-top img-200-200\" src=\" '+produto['url']+'\" alt=\"Card image cap\">'+
+                            '<div class=\"card-body\">'+
+                                '<h5 class=\"card-title lud\">'+ produto['nome'] +'</h5>'+
+                                '<p class=\"card-text\"> R$ '+parseFloat(produto['preco']).toFixed(2)+'</p>'+
+                                '<a href=\"produto-individual.php?produto='+ produto['id']+ '\" class=\"btn btn-default botao lud\">Mais</a>'+
+                            '</div>'+
+                    '</div>');
+
+		}}
+
+    for(var i=1;i<=qtdpaginas;i++)
+    {
+      b+=('<td><div class= "botaopag" style="display: inline-block"  onclick="setPage('+(i)+')" href="#" >'+ i+'</div></td>');
+		
+    }
+    
+   
+    
+  }
+}
+clearTimeout(currentTreadId);
+currentTreadId=setTimeout(function(){
+  $('#botoes').html(b);
+  $('#produtos').html('');
+  $('#produtos').append(k);
+
+
+}, 500),b,k;
+}
+</script>
+<script>
+
 function LoadProd() {
   
   if (window.XMLHttpRequest) {
@@ -12,35 +93,28 @@ function LoadProd() {
   }
   xmlhttp.onreadystatechange=function() {
     if (this.readyState==4 && this.status==200) {
-      if(this.responseText==""){
-      document.getElementById("produtos").innerHTML="";
-      document.getElementById("produtos").style.height="100px";
-    }
-      else{
           var string= this.responseText;
-          var array=JSON.parse(string);
-          console.log(array);
-          document.getElementById("produtos").innerHTML=" ";
-          for ( produto of array){
-            console.log(produto);
-            document.getElementById("produtos").innerHTML+=" <div class= \"card filter infantil\" style=\"width: 20rem;\">"+
-                        "<img class=\"card-img-top img-200-200\" src=\" "+produto['url']+"\" alt=\"Card image cap\">"+
-                            "<div class=\"card-body\">"+
-                                "<h5 class=\"card-title lud\">"+ produto['nome'] +"</h5>"+
-                                "<p class=\"card-text\"> R$ "+parseFloat(produto['preco']).toFixed(2)+"</p>"+
-                                "<a href=\"produto-individual.php?produto="+ produto['id']+ "\" class=\"btn btn-default botao lud\">Mais</a>"+
-                            "</div>"+
-                    "</div>";
-              
+          
+          array=JSON.parse(string);
+          ShowProd();            
           }
-      }
-    }
-  };
-  texto=document.getElementById("text_busca").value;
+      };
+  
+  try{
+  texto=document.getElementById('text_busca').value;}
+  catch(ex)
+  {
+    texto="";
+
+  }
   xmlhttp.open("GET","query.php?cat_nome="+categoria+ "&texto="+texto,true);
   xmlhttp.send();
+ 
 }
 function updateCat(cat){
+    if (categoria!=cat) 
+    {
+    pagina=1;
     categoria=cat;
     LoadProd();
 $('.section').hide().filter('#section1').show()
@@ -61,6 +135,8 @@ $('.section').hide().filter('#section1').show()
  });
  
 }
+}
+
 LoadProd();
 </script>
 <?php
@@ -104,13 +180,11 @@ if ($conn->connect_error) {
   </div>
     <div class="row" >     
       
-  <script>
-  loadProd();
-  </script>
+
         <div class="col busc">
           <form class="form-search ">
             <div class="input-append busca-bloco">
-              <input type="text" id="text_busca"name="busca" class="search-query" onKeyUp="LoadProd()">
+              <input type="text" id="text_busca"name="busca" class="search-query" default = "busque" onKeyUp="LoadProd()">
               <button type="submit" class="btn btn-sm botao bsc lud"><h6>Buscar</h6></button>
             </div>
           </form></div>
@@ -152,7 +226,19 @@ role=\"tab\" aria-controls=\"home\"> Todos </a>
             <div class="card-columns" id="produtos" style="min-height:40pc">
             </div>
         </div>
+        
 </div>
+<div class="row">
+<div class="col-sm-6">
+     
+     </div>
+    
+<div class="col-sm-6">
+     
+     <div id="botoes" class="containerbotoes">
+     </div>
+       </div>
+       </div>
 <?php 
   include 'footer.php'?>
 </body>
