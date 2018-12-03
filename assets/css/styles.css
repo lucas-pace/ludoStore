@@ -190,7 +190,7 @@
 .breve-descricao img{
 	margin-top: 50px;
 	margin-bottom: 30px;
-	width: 400px;
+	width: 400px !important;
 
 }
 
@@ -201,12 +201,13 @@
 }
 
 .miniatura {
-	width: 200px;
-	height: 200px;
+	width: 200px !important;
+	height: 200px !important;
 	margin-right: 15px;
 	margin-bottom: 15px;
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center !important;
 	text-align: center;
 }	
 .miniatura a{
@@ -220,13 +221,14 @@
 	opacity: 0;
 	padding-top: 120px;
 	transition: 1s;
-}
+	}
 
 .blackbox:hover{
 	opacity: 0.8;
 	transition: 1s;
-
+	
 }
+
 .blackbox-text{
 	text-align: center;
 }
@@ -280,6 +282,9 @@
 	text-align: center;
 }
 
+.miniatura{
+	background-position: center !important;
+}
 .carousel-inner img {
     height: 350px;
 } 

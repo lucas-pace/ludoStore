@@ -28,16 +28,25 @@ if ($conn->connect_error) {
 $sql = "select * from produto order by produto.preco  asc limit 4;";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+if ($row= $result->fetch_assoc()) {
 
-	$row = $result->fetch_assoc();
-	echo "<div class=\"carousel-item active\">
-				    </div>".
+	echo"<div class=\"carousel-item active\" >
+				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row['url_imagem'] . "\" alt=\"ultimos produtos lançados\"></a>
+				    </div>
+		
+	";
+	while($row = $result->fetch_assoc())
+
+	{
+		echo "".
 			"<div class=\"carousel-item\">
 				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row['url_imagem'] . "\" alt=\"ultimos produtos lançados\"></a>
 				    </div>
 		
 	";
+
+	}
+	
 	}
 
 else {

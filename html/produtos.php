@@ -30,7 +30,7 @@ $('#botoes').html('');
 	
     for(var i=0;i<=array.length-1;i++){
       produto=array[i];
-      k  +=(' <div class= \"card filter infantil\" style=\"width: 20rem;\">'+
+      k  +=(' <div class= \"card filter infantil\" style=\"width: 250px;\">'+
                         '<img class=\"card-img-top img-200-200\" src=\" '+produto['url']+'\" alt=\"Card image cap\">'+
                             '<div class=\"card-body\">'+
                                 '<h5 class=\"card-title lud\">'+ produto['nome'] +'</h5>'+
@@ -50,7 +50,7 @@ $('#botoes').html('');
       
       produto=array[ind];
       console.log(array.length+'--'+ind+'\n');
-      k+=('<div class= \"card filter infantil\" style=\"width: 20rem;\">'+
+      k+=('<div class= \"card filter infantil\" style=\"width: 250px;\">'+
                         '<img class=\"card-img-top img-200-200\" src=\" '+produto['url']+'\" alt=\"Card image cap\">'+
                             '<div class=\"card-body\">'+
                                 '<h5 class=\"card-title lud\">'+ produto['nome'] +'</h5>'+
