@@ -28,24 +28,27 @@ if ($conn->connect_error) {
 $sql = "select * from produto order by produto.preco  asc limit 4;";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+if ($row= $result->fetch_assoc()) {
 
-	$row = $result->fetch_assoc();
-	echo "<div class=\"carousel-item active\">
-				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row["url_imagem"] . "\" alt=\"ultimos produtos lançados\"></a>
-				    </div>";
-	while ($row = $result->fetch_assoc()) {
-
-		echo ("				
-
-
-			<div class=\"carousel-item\">
-				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row["url_imagem"] . "\" alt=\"ultimos produtos lançados\"></a>
+	echo"<div class=\"carousel-item active\" >
+				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row['url_imagem'] . "\" alt=\"ultimos produtos lançados\"></a>
 				    </div>
 		
-	");
+	";
+	while($row = $result->fetch_assoc())
+
+	{
+		echo "".
+			"<div class=\"carousel-item\">
+				      <a href=\"produto-individual.php?produto=".$row['id_produto'] ."\"><img class=\"d-block w-100\" src=\"" . $row['url_imagem'] . "\" alt=\"ultimos produtos lançados\"></a>
+				    </div>
+		
+	";
+
 	}
-}
+	
+	}
+
 else {
 	echo "
 	<h5 style:\"text-color:red\">ERROR<h5>
@@ -114,7 +117,7 @@ if ($result->num_rows > 0) {
 				<div class= \"blackbox\">	
 					<div class=\"blackbox-text\">
 						<h1><b>\" " . $row["nome_produto"] . " \"</b></h1>
-						<h2>\"" . $row["descricao"] . " \"</h2>
+						<h2>\"" . utf8_encode(substr($row["descricao"], 0, 120)) .'...'. " \"</h2>
 					</div>
 				</div>
 			    </a>

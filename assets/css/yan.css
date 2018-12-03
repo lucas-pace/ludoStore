@@ -1,4 +1,76 @@
+* {
+  -webkit-user-select: none;
+}
 
+html.body{
+  height: 100%;
+}
+.card{
+  min-height: 33%;
+max-height: 33%;
+}
+.card-img-top{
+  min-height: 33%;
+max-height: 33%;
+height: 225px !important;
+width: 200px !important;
+}
+ .botaopag{
+   
+  background-color:#920000;
+  
+  background: #920000;
+
+
+  font: 25px Arial, sans-serif;
+  color:white !important;
+  border-radius :50%;
+  border:0px;
+  font-family: Belleza-Regular;
+  text-align: center;
+  height: 25px;
+  width:25px;
+  margin-left: 6px !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 30px;
+  height: 30px;
+  display: table;
+  text-align: center;
+  margin-right: auto !important;
+
+ }
+ .botaopag:hover{
+  cursor:pointer;
+  background-color:white;
+  border:1px;
+  border-color:#920000;
+  background: white;
+
+  
+  font: 32px Arial, sans-serif;
+  color:#920000 !important;
+ }
+ .botaopag>.child{
+  display: table-cell;
+  margin-top: -100px;
+  vertical-align: top;
+ }
+ .containerbotoes{
+   display: inline-block !important;
+   height: 15px !important;
+   color:black;
+   margin-left: auto !important;
+   margin-right:auto !important;
+   margin-bottom: 40px;
+ }
+.tab{
+  color:#848484 !important;
+  }
+  .tab.active{
+  color: #f3f3f3 !important;
+  }
+    
   .page-footer {
     
     align-self: bottom;
@@ -19,7 +91,22 @@
     color:#FFFFFF;
     
   }
-  
+  .loader {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #920000; 
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 15%;
+    margin-right:auto;
+    margin-left:auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
   .iconeMidiaSocialFooter{
      margin-top: 0.2pc;
       font-size: 2.7pc !important;
@@ -66,7 +153,7 @@
     display: inline-block;
     width: 3pc;
     height: 3pc;
-    margin-left: 0.5pc;/
+    margin-left: 0.5pc;
     margin-right: 0.5pc;
     background-color: #FFFFFF;
     border-radius:50pc;
@@ -136,7 +223,7 @@
   margin-top: 5.3pc;
 margin-left: -10pc;
 }
-  
+
 .iconeAddProductTable{
 
   margin-top: 2px;
@@ -150,6 +237,9 @@ margin-left: -10pc;
 
 background-color: #FFFFFF;
 
+}
+.active{
+  color: white!important;
 }
 
 .iconeDeleteProductTableWraper:hover .iconeDeleteProductTable{

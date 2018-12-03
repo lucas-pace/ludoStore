@@ -140,8 +140,8 @@ body{
   }
 
 .img-200-200 {
-	width: 200px!important;
-
+	width: 200px !important;
+ 
  }
 
  .tabela{
@@ -174,12 +174,24 @@ body{
 
  column-count: auto;
 }
+.miniatura.child{
+	max-width: 60px;
+	max-height: 80px;
 
+}
 }
 .card{
-	margin-right: 10px;
+	width: 250px;
+	height: 30%!important;
+	margin-right: 1%;
 }
+.card-title{
 
+    min-height: 50px;
+    max-height: 50px;
+
+
+}
 .list-group-item-light
 {
 	background-color: #920000!important;

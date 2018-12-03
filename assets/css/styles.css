@@ -1,3 +1,17 @@
+/*ADICIONA USUARIO*/
+.tabela-user {
+	margin-left:55px;
+	margin-top: 30px;
+}
+.pag-add-usuario{
+	margin-top: 40px;
+	margin-left:60px;
+}
+
+.botao-usuario{
+	margin-top: 20px !important;
+}
+
 /*PAGINA DE CONTATO*/
 
 .form-group{
@@ -79,9 +93,9 @@
 }
 
 .descricao-produto img{
-	margin-top: 8px;
-	margin-bottom: 20px;
-	width: 300px;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	width: 400px;
 }
 
 /* PAGINA PRODUTO INDIVIDUAL ADM*/
@@ -131,15 +145,16 @@
 	margin-left:auto;
 	margin-top: 40px;
 	margin-bottom: 50px;
-}
-
-li{
-	list-style: none;
+	text-align: center;
 }
 
 .table a{
 	text-decoration: none;
 	color:#000000;
+}
+
+.icone-tab-adm{
+	margin-right: 15px;
 }
 
 
@@ -153,28 +168,7 @@ li{
 	color:#ffffff;
 }
 
-.titulo-categoria-adm{
-	margin-top: 30px;
-	margin-left: 40px;
-}
 
-.icone-categoria-adm{
-	text-align: center;
-}
-
-.icone-categoria-adm img{
-	margin-left: 4px;
-	margin-right: 4px;
-}
-
-.icone-adicionar-categoria{
-	margin-bottom: 30px;
-	text-align: right;
-}
-
-.icone-adicionar-categoria img{
-	width: 40px;
-}
 
 /* HOME */
 
@@ -196,7 +190,8 @@ li{
 .breve-descricao img{
 	margin-top: 50px;
 	margin-bottom: 30px;
-	width: 400px;
+	width: 400px !important;
+
 }
 
 .slide-index{
@@ -206,15 +201,15 @@ li{
 }
 
 .miniatura {
-	width: 200px;
-	height: 200px;
+	width: 200px !important;
+	height: 200px !important;
 	margin-right: 15px;
 	margin-bottom: 15px;
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center !important;
 	text-align: center;
 }	
-
 .miniatura a{
 	text-decoration: none;
 }
@@ -226,13 +221,14 @@ li{
 	opacity: 0;
 	padding-top: 120px;
 	transition: 1s;
-}
+	}
 
 .blackbox:hover{
 	opacity: 0.8;
 	transition: 1s;
-
+	
 }
+
 .blackbox-text{
 	text-align: center;
 }
@@ -286,6 +282,9 @@ li{
 	text-align: center;
 }
 
+.miniatura{
+	background-position: center !important;
+}
 .carousel-inner img {
     height: 350px;
 } 
