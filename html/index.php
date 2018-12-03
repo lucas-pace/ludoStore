@@ -108,7 +108,7 @@ if ($result->num_rows > 0) {
 				<div class= \"blackbox\">	
 					<div class=\"blackbox-text\">
 						<h1><b>\" " . $row["nome_produto"] . " \"</b></h1>
-						<h2>\"" . $row["descricao"] . " \"</h2>
+						<h2>\"" . utf8_encode(substr($row["descricao"], 0, 120)) .'...'. " \"</h2>
 					</div>
 				</div>
 			    </a>
