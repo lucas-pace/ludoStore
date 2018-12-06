@@ -21,7 +21,7 @@ $('#produtos').html('<div class=\"loader\"></div>');
 $('#botoes').html('');
 
  if (!Array.isArray(array) || !array.length) {
-  k+=('<tr><td>Produto nao encontrado<td><tr>'); 
+  k+=('<tr><td><h4 style="color:#920000; text-align:center;">Produto não encontrado</h4><td><tr>'); 
 }else
   {
   
@@ -50,7 +50,7 @@ $('#botoes').html('');
       
       produto=array[ind];
       console.log(array.length+'--'+ind+'\n');
-      k+=('<div class= \"card filter infantil\" style=\"width: 250px;\">'+
+      k+=('<div class= \"card filter infantil\" style=\"width: 300px;\">'+
                         '<img class=\"card-img-top img-200-200\" src=\" '+produto['url']+'\" alt=\"Card image cap\">'+
                             '<div class=\"card-body\">'+
                                 '<h5 class=\"card-title lud\">'+ produto['nome'] +'</h5>'+
@@ -149,8 +149,8 @@ if ($conn->connect_error) {
 	die ("Connection failed: " . $conn->connect_error);
 }
 ?>
-<html>
-<head>
+  <html>
+  <head>
 	<!-- Importando CSS do Bootstrap -->
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
@@ -160,11 +160,11 @@ if ($conn->connect_error) {
 	<link rel="stylesheet" href = "../assets/css/yan.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="icon" type="imagem/png" href="../assets/imagem/agora-logo.png">
-	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/js/scripts.js">
 	<link href="https://fonts.googleapis.com/css?family=Belleza|MedievalSharp" rel="stylesheet">
 	<title class="lud">LudoStore</title>
-</head>
+  </head>
 <body onLoad="LoadProd()">
   
 <?php 

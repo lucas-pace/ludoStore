@@ -282,6 +282,16 @@
 	text-align: center;
 }
 
+.card{
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.card-img-top {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .miniatura{
 	background-position: center !important;
 }
