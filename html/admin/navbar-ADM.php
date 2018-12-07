@@ -9,6 +9,12 @@ if ($conn->connect_error) {
 	die ("Connection failed: " . $conn->connect_error);
 }
 
+session_start();
+
+if(empty($_SESSION['login']))
+{
+	header('Location:../error.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +62,7 @@ if ($conn->connect_error) {
 						
 					</ul>
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item lud"><a class="nav-link" href="erro.php">Logout</a></li>
+						<li class="nav-item lud"><a class="nav-link" href="logout.php">Logout</a></li>
 					</ul>
 				</div>
 			</div>

@@ -43,7 +43,7 @@ $result=$conn->query($sql);
     else{      
         
        
-        echo ("<script>alert('$senha'); location.href='index.php';</script>");
+        echo ("<script>location.href='error.php';alert('Usuário ou senha não encontrado');</script>");
        
     }
 ?>
