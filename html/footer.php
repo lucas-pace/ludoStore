@@ -9,31 +9,32 @@
   <div class="list-unstyled">
   <li>
   <div class="infoLojaFooter">
-    <p> Endereço: xxxxxx xxxxxxxxx xxxxxxxxxxx</p>
+  <p> Endereço: Rua José Lourenço Kelmer, Campus Universitário - </p>
+  <p>São Pedro, Juiz de Fora - MG, 36036-330</p>
   </div>
   </li>
   <li>
   <div class="infoLojaFooter">
-    <p> Email: xxxxxxxxxxxxxxxxx@xxxx.xxx</p>
+  <p> Email: rh@codejr.com.br</p>
   </div>
   </li>
   <li>
   <div class="infoLojaFooter">
-    <p> Telefone: (xx)xxxxx-xxxxx</p>
+  <p> Telefone: (32) 2102-3311</p>
   </div>
   </li>
   <li><div class = "iconeMidiaSocialFooterWarper">
       <div class= "iconeMidiaSocialFooterWraperIndividual">
-      <a href="#" class="fa fa-facebook iconeMidiaSocialFooter"></a>
+      <a href="https://www.facebook.com" class="fa fa-facebook iconeMidiaSocialFooter"></a>
       </div>
       <div class= "iconeMidiaSocialFooterWraperIndividual">
-      <a href="#" class="fa fa-instagram iconeMidiaSocialFooter"></a>
+      <a href="https://www.instagram.com" class="fa fa-instagram iconeMidiaSocialFooter"></a>
       </div>
       <div class= "iconeMidiaSocialFooterWraperIndividual">
-      <a href="#" class="fa fa-twitter iconeMidiaSocialFooter"></a>
+      <a href="http://www.twitter.com" class="fa fa-twitter iconeMidiaSocialFooter"></a>
       </div>
       <div class= "iconeMidiaSocialFooterWraperIndividual">
-      <a href="#" class="fa fa-google-plus-square iconeMidiaSocialFooter"></a>
+      <a href="https://www.google.com/gmail/" class="fa fa-google-plus-square iconeMidiaSocialFooter"></a>
       </div>
       </div>
 

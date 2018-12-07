@@ -25,6 +25,7 @@ if ($conn->connect_error) {
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../../assets/js/scripts.js">
 		<link href="../../assets/css/footer-ADM-styles.css" rel="stylesheet">
+		<link rel="icon" type="imagem/png" href="../assets/imagem/agora-logo.png">
 		<title >LudoStore</title>
 
 		<script>
@@ -55,42 +56,12 @@ if ($conn->connect_error) {
 						
 					</ul>
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item mass lud"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#Login">Login</button></li>
+						<li class="nav-item lud"><a class="nav-link" href="erro.php">Logout</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 
-		<div class="modal fade" id="Logout" role="dialog">
-
-				<div class="modal-dialog">
-
-						<div class="modal-content">
-					
-
-								<div class="modal-body">
-										<form>
-												<div class="caixa_login">  
-													
-													<label class="dad lud">Logout</label>  <br>
-													<img src="../../assets/imagem/agora-logo.png">
-													<div class="dad2 lud">
-													   <label >Usuario: </label>	<input type="text" title="usuario" placeholder=""><br>    
-														<div class="dad3 lud"><label>Senha: </label><input type="password" title="senha" placeholder="">
-														
-														    <br><br>
-														</div>
-													</div>
-													<div class="modal_button">
-														<button type="button" class="btn btn-link lud" data-dismiss="modal">Voltar</button> 
-														<button type="button" class="btn btn-link lud" value="entrar">Entrar</button> 
-													</div> 
-																																			
-												</div>    
-								
-										</form> 
-			
-								</div>					
-			            </div>
-				</div>
-	    </div>
+		
+		</body>
+		</html>
