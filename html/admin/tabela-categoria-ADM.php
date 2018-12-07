@@ -71,7 +71,7 @@
 
         <div class="col">
             <div class="iconeAddProductTableWraper">
-              <a href="tabelacategoriaindividual.php?id=<?php echo $row['id_categoria'];?>" class="fa fa-plus iconeAddProductTable"></a>
+              <a href="cadastra_categoria.php?id=<?php echo $row['id_categoria'];?>" class="fa fa-plus iconeAddProductTable"></a>
             </div>
          </div> 
     </div>               
