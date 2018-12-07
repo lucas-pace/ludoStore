@@ -65,6 +65,26 @@
 
             </tbody>
           </table>
+   
+<form method="POST" action="editar_categoria.php" class="form-row tabela-user">
+<input type="hidden" name="id" value="<?php echo $_GET['categoria']; ?>">
+
+<div class="row col-md-7" >   
+     <div class="form-group col-md-6">
+      <label for="nome">Editar nome da Categoria:</label>
+      <input type="text" class="form-control" name="nome" placeholder= <?php echo $produto_categoria?> required>
+    </div>
+</div>  
+
+
+<div class="row col-md-7" > 
+  <button type="button" class="btn btn-outline-danger botao-produto-individual botao-usuario" onclick='history.go(-1)' >Voltar</button>
+    <button type="subimit" class="btn btn-outline-danger botao-produto-individual botao-usuario ">Salvar Edição</button>
+</div>
+
+
+</form>
+
         </div>
       </div>       
     </div>

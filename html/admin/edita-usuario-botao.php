@@ -12,8 +12,8 @@
 	$id_usuario = filter_input(INPUT_POST, 'cod_usuario', FILTER_SANITIZE_NUMBER_INT);
 	$login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
 	$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_EMAIL);
-	$senha = md5($_POST['senha']);
-
+	$nome = ($_POST['nome']);
+	$id = ($_POST['id']);
 	$vereficaduplicacao = "SELECT * FROM usuario WHERE login ='$login' AND id_usuario !='$id_usuario'";
     $result = mysqli_query($db_connect, $vereficaduplicacao);
 

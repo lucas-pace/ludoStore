@@ -48,10 +48,7 @@
                                                     </td>
                                                 <td>
 
-                                                    <div class="iconeDeleteProductTableWraper icone-tab-adm">
-                                                        <a href="tabelacategoriaindividual.php?id=<?php echo $row['id_categoria'];?>" class="fa fa-pencil iconeDeleteProductTable"></a>
-                                                    </div> 
-
+                                                    
                                                     <div class="iconeDeleteProductTableWraper">
                                                         <a href="#" class="fa fa-trash-o iconeDeleteProductTable" onclick=excluir('<?php echo $row['id_categoria'];?>') ></a>
                                                     </div>
