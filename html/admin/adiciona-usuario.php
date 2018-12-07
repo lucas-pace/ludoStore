@@ -1,5 +1,5 @@
 <?php include 'navbar-ADM.php';
-session_start();?> 
+?> 
 <div class="pag-add-usuario">
   <h1>Cadastro do usuário</h1>
 	<?php
