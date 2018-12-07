@@ -122,8 +122,8 @@
                  <?php } 
 
                  else { ?>
-                 
-                  <input type="submit" class="btn btn-outline-danger" name="Editar" value="Salvar">
+                  <input type="hidden" id="id-prod" name="id-prod" value="novo">
+                  <input type="submit" class="btn btn-outline-danger" name="novo" value="Salvar">
                  <?php } ?>                  
                 
                   <input type="button" class="btn btn-outline-danger" onclick='history.go(-1)' value="Voltar" >

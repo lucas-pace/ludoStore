@@ -51,6 +51,7 @@ function get_post_action($name)
     $preco_produto_adm= $_POST['preco-produto-adm'];
     $descricao_produto_adm= $_POST['descricao-produto-adm'];
     $imagem = $_FILES["foto"];
+    $id_teste= $_POST['id-prod'];
     echo $selecao_categoria_adm;
     if ( $imagem != NULL){
     $destino = '../fotos/' . $_FILES['foto']['name']; 
@@ -58,16 +59,22 @@ function get_post_action($name)
     move_uploaded_file( $arquivo_tmp, $destino  );
     }
 
- if ($id_produto != 'novo' )
+ if ($id_teste != 'novo' )
         {
             $sql="SELECT * FROM categoria WHERE nome_categoria = '$selecao_categoria_adm' ";
             $result=mysqli_query($conn,$sql);
             $endereco = mysqli_fetch_assoc($result);
             echo $_POST['id_produto'];  
             $id_produto = $_POST['id_produto'];  
-                 
+
+            if (empty($_FILES['foto']['name'])) {
+                $end=mysqli_query($conn,"UPDATE produto SET id_categoria='$endereco[id_categoria]', nome_produto=' $nome_produto_adm', preco='$preco_produto_adm', descricao='$descricao_produto_adm' WHERE id_produto= ' $id_produto' ") or die(mysqli_error($conn));
+                header('location: tabelaproduto.php');
+            }
+
+             else{    
             $end=mysqli_query($conn,"UPDATE produto SET id_categoria='$endereco[id_categoria]', nome_produto=' $nome_produto_adm', preco='$preco_produto_adm', descricao='$descricao_produto_adm', url_imagem='$destino' WHERE id_produto= ' $id_produto' ") or die(mysqli_error($conn));
-            header('location: tabelaproduto.php'); 
+            header('location: tabelaproduto.php'); }
                 
         }
 
