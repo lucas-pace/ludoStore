@@ -60,7 +60,7 @@
 				<hr>
 
 				<h2><b>Valor:</b></h2>
-				<h3>R$ <?php echo $produto_preco;?></h3>
+				<h3>R$ <?php echo (number_format((float)$produto_preco, 2, '.', ''));?></h3>
 					
 				</div>
 											

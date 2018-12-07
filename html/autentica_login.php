@@ -28,11 +28,11 @@ if ($conn->connect_error) {
 
 <?php
 $login = $_POST['login'];
-$senha = $_POST['senha'];
-$sql = mysqli_query("SELECT * FROM usuario WHERE login = '$login' and senha = '$senha' ") or die(mysql_error());
-$row = mysqli_num_rows($sql);
+$senha = md5($_POST['senha']);
+$sql = "SELECT * FROM usuario WHERE login = '$login' and senha = '$senha'";
+$result=$conn->query($sql);
 
-    if ( $row > 0 ) {
+    if ( $result->fetch_assoc() ) {
 
         session_start();
         $_SESSION['login']=$_POST['login'];
@@ -43,7 +43,7 @@ $row = mysqli_num_rows($sql);
     else{      
         
        
-        echo ("<script>alert('Usuário ou senha incorretos!'); location.href='index.php';</script>");
+        echo ("<script>alert('$senha'); location.href='index.php';</script>");
        
     }
 ?>

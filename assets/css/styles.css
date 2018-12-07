@@ -201,10 +201,11 @@
 }
 
 .miniatura {
+	
+	margin:auto !important;
 	width: 200px !important;
 	height: 200px !important;
-	margin-right: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 15px !important;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center !important;
@@ -255,13 +256,13 @@
 	text-align: left;
 }
 
-.produtos-destaques {
+.produtos-destaques  {
 	font-family: "dragonslapper";
-	text-align: left;
+	text-align: center;
 	color: #8B0000;
-	margin-top: 9px;
-	margin-bottom: 35px;
-	margin-left: 10px;
+	margin:auto;
+	margin-top: 10% !important;
+	margin-bottom: 5% !important;
 }
 
 .botao-produto-individual{
@@ -270,6 +271,9 @@
 	color: #ffffff;
 	margin-bottom: 20px;
 	margin-left: 20px;
+}
+form.form-row.tabela-user >* {
+    margin: auto;
 }
 
 /* MODIFICAÇÕES PARA MOBILE*/
@@ -280,6 +284,16 @@
 	max-width: 100%;
 	background-size: 100%;
 	text-align: center;
+}
+
+.card{
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.card-img-top {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .miniatura{

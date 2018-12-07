@@ -50,7 +50,7 @@ if ($conn->connect_error) {
 				<a class="navbar-brand lud" href="tabelaUsuario.php">LudoStore</a>
 				<div class = "collapse navbar-collapse" id= "navbarSite">
 					<ul class = "navbar-nav mr-auto">
-						<li class="nav-item lud"><a class= "nav-link" href="tabelaUsuario.php">Tabela de Usuários</a></li>
+						<li class="nav-item lud"><a class= "nav-link" href="tabelaUsuario.php">Tabela de Usuarios</a></li>
 						<li class="nav-item lud"><a class= "nav-link" href="tabela-categoria-ADM.php">Tabela Categoria</a></li>
 						<li class="nav-item lud"><a class= "nav-link" href="tabelaproduto.php">Tabela Produto</a></li>
 						
